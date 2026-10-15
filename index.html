@@ -1629,13 +1629,9 @@
       return "interval";
     }
 
-    if(!points.length){
-      svg.innerHTML = '<text class="axis-label" x="'+(W/2)+'" y="'+(H/2)+'" text-anchor="middle">Log a run with both duration and distance to see this chart</text>';
-      return;
-    }
-
-    var maxDist = Math.max.apply(null, points.map(function(p){return p.dist;}));
-    var maxDur = Math.max.apply(null, points.map(function(p){return p.dur;}));
+    // With no runs yet the axes still draw, scaled around a 10 km / 60 min run.
+    var maxDist = points.length ? Math.max.apply(null, points.map(function(p){return p.dist;})) : 10;
+    var maxDur = points.length ? Math.max.apply(null, points.map(function(p){return p.dur;})) : 60;
     function niceStep(rough){
       var mag = Math.pow(10, Math.floor(Math.log10(rough||1)));
       var norm = rough/mag;
@@ -1674,6 +1670,10 @@
       parts.push('<line class="guide-line" x1="'+x(0).toFixed(1)+'" y1="'+y(0).toFixed(1)+'" x2="'+x(xMax).toFixed(1)+'" y2="'+y(endY).toFixed(1)+'"/>');
       parts.push('<text class="guide-label" x="'+(x(xMax)-4).toFixed(1)+'" y="'+(y(endY)-4).toFixed(1)+'" text-anchor="end">'+fmtPace(pace)+'/km</text>');
     });
+
+    if(!points.length){
+      parts.push('<text class="axis-label" x="'+(padL+innerW/2)+'" y="'+(padT+innerH/2)+'" text-anchor="middle">No runs with duration and distance yet</text>');
+    }
 
     var n = points.length;
     points.forEach(function(p, i){
