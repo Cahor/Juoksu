@@ -1,0 +1,2282 @@
+<title>Juoksu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFklEQVR4nKSTTUrDQBiGnxmC1aKFKiq0C0VcKXThBVy4cOPOvRt7AS/gEfQCeiFBELTgRtBoUyqkLTFKYv6cETfVQCbxgWGGj3nf+YaZ10Lhuf1jKcWJWm5jRi9Ns/PGUvtS/IgvqIAy6Qp/7NyVOPlPJ9og4x/IvGI8cYmGDlmaUIT1u5D4b4R9m+D5idB+YG6rQzJy8W6u2Dg9KzYIXh7xb68JlEltpUU0HjG72qK5u09hB9HrgNgdEg4c6uubLB8eUeoK8btP5E3U3WMW9w4wYcpACMg+YzULMlkzMph6hZn2GgudHaxGk8C+NzLI/Qfph4+sz2OClVc0FX/vVaNHdXpSp4qKaK3UkdSpKtmJjnNXa78AAAD//w2QcUYAAAAGSURBVAMA1+VzXbMA/3kAAAAASUVORK5CYII=" />
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACZElEQVR4nNSXz2vTYBjHv2+aNqstWzuomxVEYaDowYsg7KAgqAcPA72quKv4J/gneBSvetjRH3gYYsHD1INsCNMeHKhMJ3abrW26tEvSNHl9nzfbFDwktWmDHwhNmh/f533e7/Mmj4o/aLerRW47t8DYJcb4Mc6RQgQwhg7nbAWczzMteTeTKVT2zu3utBrrNxj4PQ6kMUCEoMnBbmbzBx7sHPviAL+PocJmKQhGaUfH+TTokf8lLzKBVHJK9ed8uOKEHLDQVshwiAsye1uv2FG5vXd9dNS4xAnSVhAz/2cA1tfPaL5ZALdM9Ivay8XdZh3tD2V4toX04SkYy4uwvn2BOpbD+IUZeY3++gX0VyWMn5/B6KnpwGeGDoDEjeUlKNoI4Lr48WQO3a0muG3LPNbmHyJz/CSM8lt06zV4jhMqgNBTQCMncVq7jfdLsNdWsb1ShtvaEv+npXinuoHs0RNIThSRmz4X6rmhMmC8W5RpTxUm8LP0FNbqRyG2if1XrontOvohVABdvQFt8iBqzx7B2VyX4kdu35Gj7pfAAJwN/9XtCFHCFBWQP3sxEvFQAezibrdgf1+T+4XLVxEVgSZ0hPvJfFRuiX0Z4YNJuQ0tAGUkLQ2ojuaEF+pICiNGSeAUqLm8/PVsE4ns2J4XoiIwAwnN/1bRiofANE3WemPhOaIiMANMTEHu9Bm4YsUzRf3D81B9PCcrIQpYq1HhvdxAGdBflvpegP45gKhR6LMIMUHaiuxYYoK0FWqXEBfUqsXdmCjUKFKvhiFDmqQtFyK/UWSzMqoB42v4feHO8W/iaM9/AQAA//9AW5ipAAAABklEQVQDAPmnEXybUWehAAAAAElFTkSuQmCC" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADi0lEQVR4nOyazWsTQRjGn52kSarNR79sGlusKIhe6qn11pt6EVFQ9CAe/AM8etCrePGfEAQVQS9ePElBBItCq4iKWlNqY2q0+bRNN/vhvLOb7Ta0wm7STRb6u8zubHb3eWbmnZ3dN0Fsw2rx54SmahcgSVM6cEQCYvAQfs8Sv+dn6Po0C7DHe+LDM1v9TmqsKP/OHGUB3OYXOIcOggt9qqm4GR1IfWyo36BczF6SNO0e3wyhM5F1xq5G48mH9QrLgCn+AXwAN3G5bkIYoGEjBTCLzm35RmRdxXEaToz2aMzDP+KJkKkZkphtNP01fAhj0iQTU6VPIe1BmufhV7h2Rg8p+BTSHvT6CdtKSDuDz9k10G6CaDG1bEaUXckUvKBlBpTiCtbSX6EU8mI/keiFFOnGTiNV8hkdTVKem7GEE+HkfuiqArVURHUxjWA8gb6TZzeds/rpPfKvXiCSGkX/afcr96Z7wC6ehSMIxuKovHuL6lLa+o02X4XEj4UGk9h7bFwYS9+5Aa1WM47zcvDMRbihKQN28d1jh1GaeYmiKVzhItXCCtazS2K/MvfGOq8r0WeJJ6oL3+AW1wbopo3iqdW19SrkzCLk3PK259a4sdBQCvKyEfDxE+5XM64M6NU1EbDiAjxY7eKrC/Pc2Io4RsNl3/kroiTkXNYwwM1RHfVgeDCFUGoEbnFlYN1sOXGBvTFrvKuVkiX+4K27lvA6FAP2Mjo+gWZxbMDe+qGBIeSePRLb1e9frGGzlfidwrEBe+ur5aIodUVti3jCdRDTlFn5MCu2a78MUyTcS/GEYwO1wh/jxGgcSrlgBO6PBVFHAes1jg3Up06FByyhyxvzudetTzhejdLQIdS8MdvQGojonTqFduA6BgI9UVGyrvZ+jXFtQPlbNjb4Bxqi/pDyGsdDqKu339gIGMKlcFiUtf8sHXYS5wbifaIM9sT4TJTgMWEYoB7ITz+H1zg3wN+0aP0THh5BZHRMBHX3gUPiWO7JfXiNq3diWsNEuOjY5JTohQFzLd+OXmjqfYDetFLXrottWt9TD9QXal7RklfKdrL7Xajd0MfdEnwKaWcilelTSDujPCz8CuWQKYkMn0LaGWXAKYkMn0GaSbuYhSgDzgsZ/kE2NRvTKOVbKQMOnyCy9eZfDqznAGW+KQOOzu4J2Z6lJzY9yIQJngHvxJggTSI7bxNv1m+NX/5u8w8AAP//DDCD8gAAAAZJREFUAwDfuX0orf6ofwAAAABJRU5ErkJggg==" />
+<style>
+  :root{
+    color-scheme: light;
+    --page:      #f7f6f2;
+    --surface:   #ffffff;
+    --surface-2: #f0efe9;
+    --ink:       #14181a;
+    --ink-2:     #55605d;
+    --muted:     #8b938e;
+    --hair:      rgba(20,24,26,0.11);
+    --hair-2:    rgba(20,24,26,0.07);
+    --accent:    #b5541f;
+    --accent-ink:#ffffff;
+    --accent-soft: rgba(181,84,31,0.12);
+
+    --zone-easy-l:     #008300;
+    --zone-tempo-l:    #eda100;
+    --zone-interval-l: #d1394f;
+    --zone-strides-l:  #2a78d6;
+
+    --chart-target: #9aa39d;
+    --chart-actual: #b5541f;
+    --seq-old: #f0dcc9;
+    --seq-new: #8a3d13;
+
+    --font-display: "Oswald","Barlow Semi Condensed","Arial Narrow",sans-serif;
+    --font-mono: ui-monospace,"Cascadia Mono","JetBrains Mono","SFMono-Regular",Consolas,monospace;
+    --font-body: -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])){
+      color-scheme: dark;
+      --page:      #0d1210;
+      --surface:   #161d1a;
+      --surface-2: #1d2521;
+      --ink:       #f1f3f1;
+      --ink-2:     #b7c0bb;
+      --muted:     #7d8985;
+      --hair:      rgba(241,243,241,0.13);
+      --hair-2:    rgba(241,243,241,0.08);
+      --accent:    #d9793a;
+      --accent-ink:#181008;
+      --accent-soft: rgba(217,121,58,0.16);
+
+      --zone-easy-l:     #2fae2f;
+      --zone-tempo-l:    #bf8600;
+      --zone-interval-l: #e0415f;
+      --zone-strides-l:  #3987e5;
+
+      --chart-target: #56605b;
+      --chart-actual: #d9793a;
+      --seq-old: #5c4534;
+      --seq-new: #f5b077;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --page:      #0d1210;
+    --surface:   #161d1a;
+    --surface-2: #1d2521;
+    --ink:       #f1f3f1;
+    --ink-2:     #b7c0bb;
+    --muted:     #7d8985;
+    --hair:      rgba(241,243,241,0.13);
+    --hair-2:    rgba(241,243,241,0.08);
+    --accent:    #d9793a;
+    --accent-ink:#181008;
+    --accent-soft: rgba(217,121,58,0.16);
+    --zone-easy-l:     #2fae2f;
+    --zone-tempo-l:    #bf8600;
+    --zone-interval-l: #e0415f;
+    --zone-strides-l:  #3987e5;
+    --chart-target: #56605b;
+    --chart-actual: #d9793a;
+    --seq-old: #5c4534;
+    --seq-new: #f5b077;
+  }
+  :root[data-theme="light"]{
+    color-scheme: light;
+    --page:      #f7f6f2;
+    --surface:   #ffffff;
+    --surface-2: #f0efe9;
+    --ink:       #14181a;
+    --ink-2:     #55605d;
+    --muted:     #8b938e;
+    --hair:      rgba(20,24,26,0.11);
+    --hair-2:    rgba(20,24,26,0.07);
+    --accent:    #b5541f;
+    --accent-ink:#ffffff;
+    --accent-soft: rgba(181,84,31,0.12);
+    --zone-easy-l:     #008300;
+    --zone-tempo-l:    #eda100;
+    --zone-interval-l: #d1394f;
+    --zone-strides-l:  #2a78d6;
+    --chart-target: #9aa39d;
+    --chart-actual: #b5541f;
+    --seq-old: #f0dcc9;
+    --seq-new: #8a3d13;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--page);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:15px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent-soft);}
+
+  .wrap{max-width:1040px;margin:0 auto;padding:22px 20px 80px;}
+
+  /* ---------- top strip ---------- */
+  .topbar{
+    display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between;
+    gap:16px 28px;
+    padding-bottom:16px; margin-bottom:18px;
+    border-bottom:1px solid var(--hair);
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-mark{width:36px; height:36px; flex:none; overflow:visible;}
+  .brand-mark path{fill:none; stroke:var(--accent); stroke-linecap:round; stroke-width:8;}
+  .brand-mark circle{fill:var(--accent);}
+  .brand-mark .s1{opacity:.38;}
+  .brand-mark .s2{opacity:.68;}
+  .brand-text{display:flex; flex-direction:column; gap:2px;}
+  .brand .eyebrow{
+    font:600 11px/1 var(--font-body); letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  }
+  .brand h1{
+    margin:0; font:600 30px/1 var(--font-display); letter-spacing:.01em; text-transform:uppercase;
+  }
+  .topstats{display:flex; gap:26px; flex-wrap:wrap;}
+  .topstat{text-align:right;}
+  .topstat .label{font:600 10px/1 var(--font-body); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:5px;}
+  .topstat .value{font:600 22px/1 var(--font-mono); font-variant-numeric:tabular-nums;}
+  .topstat .sub{font:400 12px/1.3 var(--font-body); color:var(--ink-2); margin-top:3px;}
+
+  .track-progress{
+    position:relative; height:10px; border-radius:999px; background:var(--surface-2);
+    border:1px solid var(--hair); overflow:hidden; margin-top:14px;
+  }
+  .track-progress > i{
+    display:block; height:100%; border-radius:999px;
+    background:linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 70%, white));
+  }
+  .track-progress .marks{position:absolute; inset:0;}
+  .track-progress .marks b{
+    position:absolute; top:0; bottom:0; width:1px; background:rgba(0,0,0,0.18);
+  }
+  @media (prefers-color-scheme:dark){ .track-progress .marks b{background:rgba(255,255,255,0.22);} }
+  :root[data-theme="dark"] .track-progress .marks b{background:rgba(255,255,255,0.22);}
+
+  /* ---------- layout ---------- */
+  .grid{display:grid; grid-template-columns: 1.15fr 1fr; gap:16px; align-items:start;}
+  @media (max-width: 860px){ .grid{grid-template-columns:1fr;} }
+  .col{display:flex; flex-direction:column; gap:16px; min-width:0;}
+  .frow .field{min-width:0;}
+
+  .card{
+    background:var(--surface); border:1px solid var(--hair); border-radius:10px;
+    padding:18px 20px;
+  }
+  .card h2{
+    margin:0 0 14px; font:600 13px/1 var(--font-body); letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2);
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+  }
+  .card h2 span.tag{
+    font:600 10px/1 var(--font-body); letter-spacing:.06em; text-transform:none; color:var(--muted);
+  }
+
+  .banner{
+    margin-top:2px; padding:9px 12px; border-radius:7px; font-size:13px;
+    background:var(--accent-soft); color:var(--ink); border:1px solid transparent;
+  }
+
+  /* ---------- full program ---------- */
+  .phase-group{border-top:1px solid var(--hair-2);}
+  .phase-group:first-of-type{border-top:none;}
+  .phase-group > summary{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:13px 2px; cursor:pointer; list-style:none;
+  }
+  .phase-group > summary::-webkit-details-marker{display:none;}
+  .phase-group > summary::marker{content:"";}
+  .phase-group .ptitle{display:flex; align-items:center; gap:9px;}
+  .phase-group .chev{
+    display:inline-block; width:9px; height:9px; flex:none;
+    border-right:2px solid var(--ink-2); border-bottom:2px solid var(--ink-2);
+    transform:rotate(45deg); transition:transform .15s ease; margin-top:-2px;
+  }
+  .phase-group:not([open]) .chev{transform:rotate(-45deg); margin-top:0;}
+  .phase-group .pname{font:600 15px/1 var(--font-display); text-transform:uppercase; letter-spacing:.01em;}
+  .phase-group .prange{font:400 12px/1 var(--font-body); color:var(--muted);}
+  .phase-group .pmeta{font:600 11px/1 var(--font-mono); color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .phase-group .pmeta.done{color:var(--zone-easy-l);}
+  table.progtable{width:100%; border-collapse:collapse; font-size:12.8px; margin:0 0 14px;}
+  table.progtable th{
+    text-align:left; font:600 10px/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted); padding:4px 8px 6px; white-space:nowrap;
+  }
+  table.progtable td{padding:7px 8px; border-top:1px solid var(--hair-2); vertical-align:top;}
+  table.progtable tr.past td{color:var(--muted);}
+  table.progtable tr.current td{background:var(--accent-soft);}
+  table.progtable tr.current td:first-child{box-shadow:inset 3px 0 0 var(--accent);}
+  table.progtable td.wk{font:600 12.5px/1.3 var(--font-mono); font-variant-numeric:tabular-nums; white-space:nowrap;}
+  table.progtable td.slotcell{color:var(--ink-2);}
+  table.progtable td.slotcell b{color:var(--ink); font-weight:600;}
+  table.progtable td.slotcell.optional{color:var(--muted);}
+  table.progtable td.slotcell.optional b{color:var(--muted);}
+  .pill{
+    display:inline-block; font:600 9.5px/1 var(--font-body); letter-spacing:.05em; text-transform:uppercase;
+    padding:3px 6px; border-radius:5px; margin-left:6px; white-space:nowrap;
+  }
+  .pill.tag-recovery, .pill.tag-taper{background:var(--surface-2); color:var(--ink-2); border:1px solid var(--hair);}
+  .pill.tag-checkpoint, .pill.tag-race{background:var(--accent); color:var(--accent-ink);}
+  .kmopt{font-weight:400; color:var(--muted); margin-top:2px;}
+  .daytag{font:600 10px/1 var(--font-body); letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin-left:2px;}
+  .donemark{
+    display:inline-block; margin-left:6px; font:700 11px/1 var(--font-body); letter-spacing:.02em;
+    color:var(--zone-easy-l); white-space:nowrap; vertical-align:middle;
+  }
+  .wpace{font-weight:600;}
+  .wpace-easy{color:var(--zone-easy-l);}
+  .wpace-tempo{color:var(--zone-tempo-l);}
+  .wpace-interval{color:var(--zone-interval-l);}
+  .wpace-strides{color:var(--zone-strides-l);}
+
+  /* ---------- zones ---------- */
+  .zones{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+  @media (max-width:480px){ .zones{grid-template-columns:1fr;} }
+  .zone{
+    border:1px solid var(--hair); border-radius:8px; padding:11px 12px;
+    display:flex; flex-direction:column; gap:4px;
+  }
+  .zone .dot-label{display:flex; align-items:center; gap:7px;}
+  .zone .dot{width:9px; height:9px; border-radius:50%; flex:none;}
+  .zone .name{font:600 11px/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2);}
+  .zone .pace{font:600 19px/1 var(--font-mono); font-variant-numeric:tabular-nums; margin-top:2px;}
+  .zone .hr{font:600 12.5px/1.2 var(--font-mono); font-variant-numeric:tabular-nums; color:var(--ink-2); margin-top:3px;}
+  .zone .feel{font-size:12px; color:var(--muted); margin-top:2px;}
+  .zonebasis{font-size:12px; color:var(--muted); margin-top:12px;}
+  .hr-inputs{display:flex; gap:8px; margin-top:12px; max-width:260px;}
+
+  /* ---------- forms ---------- */
+  form.stack{display:flex; flex-direction:column; gap:10px;}
+  .frow{display:grid; grid-template-columns:0.8fr 1fr 1.3fr 0.85fr 0.85fr; gap:8px;}
+  @media (max-width:560px){ .frow{grid-template-columns:1fr 1fr;} }
+  .field{display:flex; flex-direction:column; gap:4px;}
+  .hms-row{display:flex; gap:6px;}
+  .hms-item{display:flex; flex-direction:column; align-items:center; gap:3px; flex:1; min-width:36px;}
+  .hms-item input{width:100%; min-width:0; text-align:center; padding:8px 4px;}
+  .hms-unit{font:600 9px/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase; color:var(--muted);}
+  .field label{font:600 10px/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase; color:var(--muted);}
+  input[type=date], input[type=number], input[type=text], select, textarea{
+    font:400 14px/1.3 var(--font-body); color:var(--ink); background:var(--surface-2);
+    border:1px solid var(--hair); border-radius:6px; padding:8px 9px; width:100%;
+  }
+  textarea{resize:vertical; min-height:56px;}
+  input:focus, select:focus, textarea:focus, button:focus-visible{
+    outline:2px solid var(--accent); outline-offset:1px;
+  }
+  .btnrow{display:flex; gap:8px; flex-wrap:wrap;}
+  button{font-family:var(--font-body); cursor:pointer;}
+  .btn{
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:7px;
+    padding:10px 16px; font:600 12px/1 var(--font-body); letter-spacing:.05em; text-transform:uppercase;
+  }
+  .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--hair);}
+  .btn.ghost:hover{border-color:var(--accent); color:var(--accent);}
+  .btn:disabled{opacity:.5; cursor:not-allowed;}
+
+  /* ---------- chart ---------- */
+  .chart-legend{display:flex; gap:16px; font-size:12px; color:var(--ink-2); margin-bottom:6px; flex-wrap:wrap;}
+  .chart-legend span{display:inline-flex; align-items:center; gap:6px;}
+  .chart-legend i{width:16px; height:2px; background:currentColor; display:inline-block;}
+  .chart-legend i.dashed{background:none; border-top:2px dashed currentColor;}
+  .chart-wrap{overflow-x:auto;}
+  svg.chart{display:block; overflow:visible;}
+  .chart .grid-line{stroke:var(--hair); stroke-width:1;}
+  .chart .axis-label{fill:var(--muted); font:400 10.5px var(--font-body);}
+  .chart .target-line{fill:none; stroke:var(--chart-target); stroke-width:2; stroke-dasharray:5 4;}
+  .chart .actual-line{fill:none; stroke:var(--chart-actual); stroke-width:2.25; stroke-linecap:round; stroke-linejoin:round;}
+  .chart .actual-dot{fill:var(--chart-actual); stroke:var(--surface); stroke-width:2;}
+  .chart .end-label{font:600 11.5px/1 var(--font-mono); fill:var(--chart-actual);}
+  .chart .hover-line{stroke:var(--muted); stroke-width:1; opacity:0;}
+  .chart .tooltip-bg{fill:var(--surface); stroke:var(--hair);}
+  .chart .tooltip-txt{font:600 11.5px var(--font-mono); fill:var(--ink);}
+  .chart .tooltip-txt.sub{font:400 10.5px var(--font-body); fill:var(--ink-2);}
+  .hitcol{fill:transparent;}
+
+  /* ---------- progress scatter ---------- */
+  .chart .guide-line{fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:3 4; opacity:.55;}
+  .chart .guide-label{fill:var(--muted); font:400 10px/1 var(--font-mono);}
+  .prog-dot{
+    fill: color-mix(in oklab, var(--seq-new) calc(var(--t,0.5)*100%), var(--seq-old) calc((1 - var(--t,0.5))*100%));
+    stroke: color-mix(in oklab, var(--ink) 38%, transparent);
+    stroke-width:1.5; cursor:pointer;
+    transition: r .1s ease;
+  }
+  .prog-dot:hover{ r:7.5; }
+  .prog-dot.hr-easy{stroke:var(--zone-easy-l); stroke-width:3;}
+  .prog-dot.hr-tempo{stroke:var(--zone-tempo-l); stroke-width:3;}
+  .prog-dot.hr-interval{stroke:var(--zone-interval-l); stroke-width:3;}
+  .prog-dot.cp{fill:var(--chart-actual);}
+  .seq-legend{display:flex; align-items:center; gap:8px; font-size:11.5px; color:var(--muted); margin-top:10px;}
+  .seq-legend .bar{
+    flex:1; max-width:140px; height:7px; border-radius:999px;
+    background:linear-gradient(90deg, var(--seq-old), var(--seq-new));
+    border:1px solid var(--hair);
+  }
+  .shape-legend{display:flex; gap:16px; font-size:12px; color:var(--ink-2); flex-wrap:wrap; align-items:center; margin-bottom:10px;}
+  .shape-legend span{display:inline-flex; align-items:center; gap:7px;}
+  .shape-legend .sw-circle{width:9px; height:9px; border-radius:50%; background:var(--ink-2); display:inline-block;}
+  .shape-legend .sw-ring{width:9px; height:9px; border-radius:50%; background:transparent; border:2px solid var(--ink-2); display:inline-block;}
+  #progressSvg{width:100%; height:auto; max-width:100%;}
+
+  /* ---------- history ---------- */
+  .hist-filters{display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap;}
+  .chip{
+    border:1px solid var(--hair); background:transparent; color:var(--ink-2);
+    font:600 11px/1 var(--font-body); letter-spacing:.03em; padding:6px 11px; border-radius:999px; cursor:pointer;
+  }
+  .chip.active{background:var(--ink); color:var(--page); border-color:var(--ink);}
+  .tablewrap{overflow-x:auto;}
+  table{width:100%; border-collapse:collapse; font-size:13.5px;}
+  th{
+    text-align:left; font:600 10px/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted); border-bottom:1px solid var(--hair); padding:6px 8px; white-space:nowrap;
+  }
+  td{padding:8px; border-bottom:1px solid var(--hair-2); vertical-align:top;}
+  td.num{font-family:var(--font-mono); font-variant-numeric:tabular-nums; white-space:nowrap;}
+  td.notes{color:var(--ink-2);}
+  .rowtag{
+    display:inline-block; font:600 10px/1 var(--font-body); letter-spacing:.05em; text-transform:uppercase;
+    padding:3px 7px; border-radius:5px; color:#fff;
+  }
+  .rowactions{display:flex; gap:2px; white-space:nowrap;}
+  .del{background:none; border:none; color:var(--muted); font-size:15px; cursor:pointer; padding:2px 4px;}
+  .del:hover{color:var(--zone-interval-l);}
+  .edit{background:none; border:none; color:var(--muted); font-size:13px; cursor:pointer; padding:2px 4px;}
+  .edit:hover{color:var(--accent);}
+  .empty{color:var(--muted); font-size:13px; padding:6px 0;}
+
+  /* ---------- views & gym ---------- */
+  .viewnav{display:flex; gap:6px; margin-bottom:16px;}
+  .viewnav .chip{text-decoration:none;}
+  #gymWeekNote .banner{margin:0 0 12px;}
+  .weeknote{margin:0 0 10px; font-size:13.5px; color:var(--ink-2);}
+  /* seven day tiles in a row; on narrow screens they stack into a list */
+  .weekstrip{display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:6px; margin:0 0 14px;}
+  .wday{display:flex; flex-direction:column; gap:3px; padding:10px 8px; border:1px solid var(--hair); border-radius:8px; text-align:center;}
+  .wday span{font:600 10px/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase; color:var(--muted);}
+  .wday b{font-size:14px; color:var(--ink);}
+  .wday i{font-style:normal; font-size:12px; color:var(--ink-2);}
+  .wday.gym{background:var(--accent-soft); border-color:transparent;}
+  .wday.rest{border-style:dashed;}
+  .wday.rest b{color:var(--muted); font-weight:500;}
+  @media (max-width: 560px){
+    .weekstrip{grid-template-columns:1fr; gap:4px;}
+    .wday{flex-direction:row; align-items:baseline; gap:10px; padding:8px 12px; text-align:left;}
+    .wday span{width:22px;}
+  }
+  /* four columns need more room than half the page width, so on wide screens
+     the gym cards reach past it and the two sessions sit side by side */
+  @media (min-width: 1240px){
+    #viewGym > .col, #viewGym > .topbar{margin-left:-90px; margin-right:-90px;}
+    #gymSessions{display:grid; grid-template-columns:1fr 1fr; align-items:start;}
+  }
+  #gymSessions table{table-layout:fixed; min-width:520px;}
+  #gymSessions th:nth-child(2){width:28%;}
+  #gymSessions th:nth-child(3){width:140px;}
+  #gymSessions th:nth-child(4){width:70px;}
+  #gymSessions .exmuscles{font-size:13px; color:var(--ink-2);}
+  #gymSessions td{vertical-align:middle; padding-top:10px; padding-bottom:10px;}
+  #gymSessions .exnote{font-size:12.5px; color:var(--muted);}
+  #gymSessions tbody tr{cursor:pointer;}
+  #gymSessions tr.hasalt td{border-bottom:none; padding-bottom:4px;}
+  #gymSessions tr.altrow td{padding-top:4px;}
+  #gymSessions .altor{font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--muted);}
+  #gymMuscles{display:flex; flex-wrap:wrap; gap:8px 28px; align-items:flex-start;}
+  #gymMuscles svg{flex:0 1 480px; min-width:260px; max-width:100%; height:auto;}
+  #gymMuscles .muslist{flex:1 1 280px; min-width:0;}
+  #gymMuscles .muslist p{margin:0 0 10px; font-size:13px; color:var(--ink-2);}
+  #gymMuscles ul{list-style:none; margin:0; padding:0; font-size:13.5px;}
+  #gymMuscles .body{fill:var(--muted); opacity:.3;}
+  #gymMuscles .body .limb{fill:none; stroke:var(--muted); stroke-linecap:round;}
+  #gymMuscles .figcap{font:600 10px/1 var(--font-body); letter-spacing:.06em; text-transform:uppercase; fill:var(--muted);}
+  #gymMuscles .mus{fill:var(--accent); fill-opacity:var(--lvl); cursor:pointer; transition:fill-opacity .12s;}
+  #gymMuscles.picking .mus{fill:var(--muted); fill-opacity:.22;}
+  #gymMuscles.picking .mus.on{fill:var(--accent); fill-opacity:1;}
+  #gymMuscles .musrow{padding:6px 8px; border-bottom:1px solid var(--hair-2); border-radius:6px; cursor:pointer;}
+  #gymMuscles .musrow b{display:block;}
+  #gymMuscles .musrow span{font-size:12.5px; color:var(--muted);}
+  #gymMuscles .musrow.on{background:var(--accent-soft);}
+  .rules{margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-2);}
+  .rules li{margin-bottom:7px;}
+  .rules b{color:var(--ink);}
+
+  /* ---------- statistics ---------- */
+  #stats table + table{margin-top:16px;}
+  #stats td.statlabel{color:var(--ink-2); white-space:nowrap;}
+  #stats tr.total td{font-weight:600;}
+  #stats td.detail{color:var(--muted); font-size:12.5px;}
+
+  /* ---------- backlog ---------- */
+  #ideaList{margin-top:14px;}
+  #ideaFilters{margin:14px 0 0;}
+  #ideaFilters:empty{display:none;}
+  .idea .meta .app{color:var(--accent); font-weight:600;}
+  .idea{
+    display:grid; grid-template-columns:1fr auto; gap:10px; align-items:start;
+    padding:10px 0; border-top:1px solid var(--hair-2);
+  }
+  .idea .text{font-size:13.5px; white-space:pre-wrap; overflow-wrap:anywhere;}
+  .idea .meta{font:400 11px/1.3 var(--font-mono); color:var(--muted); margin-top:3px;}
+  .idea.built .text{color:var(--muted); text-decoration:line-through;}
+  .idea.built .meta{color:var(--zone-easy-l); font-weight:600;}
+
+  /* ---------- settings ---------- */
+  .settings-row{display:flex; gap:10px; flex-wrap:wrap; align-items:end;}
+  footer.card{margin-top:16px;}
+  .fineprint{font-size:12px; color:var(--muted); margin-top:10px; line-height:1.5;}
+
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important;} }
+</style>
+
+<div class="wrap">
+
+  <nav class="viewnav">
+    <a class="chip" href="#run" data-view="run">Running</a>
+    <a class="chip" href="#stats" data-view="stats">Statistics</a>
+    <a class="chip" href="#gym" data-view="gym">Gym</a>
+    <a class="chip" href="#backlog" data-view="backlog">Backlog</a>
+  </nav>
+
+  <div id="viewRun">
+  <div class="topbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path class="s1" d="M 14 78 A 46 46 0 0 1 40 20" />
+        <path class="s2" d="M 24 82 A 40 40 0 0 1 54 26" />
+        <path d="M 34 86 A 34 34 0 0 1 70 33" />
+        <circle cx="78" cy="30" r="7" />
+      </svg>
+      <div class="brand-text">
+        <span class="eyebrow">10 km · 62&#8202;→&#8202;48</span>
+        <h1 id="phaseName">Base Building</h1>
+      </div>
+    </div>
+    <div class="topstats">
+      <div class="topstat">
+        <div class="label">Week</div>
+        <div class="value" id="weekValue">1 / 52</div>
+        <div class="sub" id="weekSub">—</div>
+      </div>
+      <div class="topstat">
+        <div class="label">Next checkpoint</div>
+        <div class="value" id="checkpointValue">—</div>
+        <div class="sub" id="checkpointSub">—</div>
+      </div>
+      <div class="topstat">
+        <div class="label">PB · 10&#8201;km</div>
+        <div class="value" id="pbValue">62:00</div>
+        <div class="sub" id="pbSub">baseline</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="track-progress">
+    <i id="yearBar" style="width:2%"></i>
+    <div class="marks" id="yearMarks"></div>
+  </div>
+
+  <div style="height:18px"></div>
+
+  <div class="card" id="progressCard">
+    <h2>Distance &amp; time, every run</h2>
+    <div class="shape-legend">
+      <span><i class="sw-circle"></i> Every logged run (A + B)</span>
+      <span><i class="sw-circle" style="background:var(--chart-actual)"></i> Checkpoint (10&#8201;km time trial)</span>
+    </div>
+    <div class="shape-legend" id="hrLegend" style="display:none">
+      <span><i class="sw-ring" style="border-color:var(--zone-easy-l)"></i> Avg HR: easy</span>
+      <span><i class="sw-ring" style="border-color:var(--zone-tempo-l)"></i> Avg HR: tempo</span>
+      <span><i class="sw-ring" style="border-color:var(--zone-interval-l)"></i> Avg HR: hard</span>
+    </div>
+    <div class="chart-wrap"><svg class="chart" id="progressSvg" width="860" height="240" viewBox="0 0 860 240"></svg></div>
+    <div class="seq-legend"><span>Oldest</span><span class="bar"></span><span>Most recent</span></div>
+    <div class="fineprint" style="margin-top:8px">Faint dotted lines mark constant pace. As you improve, newer points for a given distance should sit lower — the same route run faster — or land on a steeper (lower) pace line.</div>
+  </div>
+
+  <div style="height:16px"></div>
+
+  <div class="card" id="programCard">
+    <h2>Full program <span class="tag" id="programTag"></span></h2>
+    <div class="shape-legend">
+      <span><i class="sw-circle" style="background:var(--zone-easy-l)"></i> Easy</span>
+      <span><i class="sw-circle" style="background:var(--zone-tempo-l)"></i> Tempo</span>
+      <span><i class="sw-circle" style="background:var(--zone-interval-l)"></i> Hard / interval</span>
+      <span><i class="sw-circle" style="background:var(--zone-strides-l)"></i> Strides</span>
+    </div>
+    <div id="fullProgram"></div>
+    <div class="fineprint">Est.&nbsp;km is the week's total for runs A and B plus a mandatory run C, with each segment run at the middle of its pace zone for the 10&#8201;km time targeted that week. In weeks where run C is optional, the first number is runs A and B only and the second line is the total if you also do run C. Actual&nbsp;km is the distance of every run you logged that week, checkpoints included.</div>
+  </div>
+
+  <div style="height:16px"></div>
+
+  <div class="card">
+    <h2>Log a run</h2>
+    <form class="stack" id="runForm">
+      <div class="frow">
+        <div class="field"><label for="rDate">Date</label><input type="date" id="rDate" required></div>
+        <div class="field"><label for="rSlot">Session</label>
+          <select id="rSlot">
+            <option value="A">Run A · quality</option>
+            <option value="B">Run B · endurance</option>
+            <option value="C">Run C · easy / 3rd run</option>
+            <option value="CP">Checkpoint · 10&#8201;km time trial</option>
+          </select>
+        </div>
+        <div class="field"><label for="rDurH">Duration</label>
+          <div class="hms-row">
+            <div class="hms-item"><input type="text" inputmode="numeric" pattern="[0-9]*" id="rDurH" placeholder="0"><span class="hms-unit">hrs</span></div>
+            <div class="hms-item"><input type="text" inputmode="numeric" pattern="[0-9]*" id="rDurM" placeholder="0"><span class="hms-unit">min</span></div>
+            <div class="hms-item"><input type="text" inputmode="numeric" pattern="[0-9]*" id="rDurS" placeholder="0"><span class="hms-unit">sec</span></div>
+          </div>
+        </div>
+        <div class="field"><label for="rDist">Distance (km)</label><input type="text" inputmode="decimal" id="rDist" placeholder="e.g. 9,36"></div>
+        <div class="field"><label for="rHR">Avg HR (bpm)</label><input type="number" inputmode="numeric" id="rHR" min="60" max="230" placeholder="optional"></div>
+      </div>
+      <div class="field"><label for="rNotes">Notes</label><textarea id="rNotes" placeholder="How did it feel? Weather, terrain, RPE…"></textarea></div>
+      <div class="btnrow">
+        <button type="submit" class="btn" id="runFormSubmit">Add run</button>
+        <button type="button" class="btn ghost" id="runFormCancel" style="display:none">Cancel edit</button>
+      </div>
+    </form>
+  </div>
+
+  <div style="height:16px"></div>
+
+  <div class="card">
+    <h2>History <span class="tag" id="histCount"></span></h2>
+    <div class="hist-filters" id="histFilters"></div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Date</th><th>Wk</th><th>Session</th><th>Time</th><th>Dist</th><th>Pace</th><th>Avg&nbsp;HR</th><th>Notes</th><th></th></tr></thead>
+        <tbody id="histBody"></tbody>
+      </table>
+      <div class="empty" id="histEmpty" style="display:none">No runs logged yet — add your first session above.</div>
+    </div>
+  </div>
+
+  <div style="height:16px"></div>
+
+  <div class="grid">
+    <div class="col">
+
+      <div class="card">
+        <h2>Checkpoint progress</h2>
+        <div class="chart-legend">
+          <span><i style="color:var(--chart-actual)"></i> Your time</span>
+          <span><i class="dashed" style="color:var(--chart-target)"></i> Target glide path</span>
+        </div>
+        <div class="chart-wrap"><svg class="chart" id="chartSvg" width="460" height="200" viewBox="0 0 460 200"></svg></div>
+        <div class="fineprint">Tick "10&#8201;km checkpoint time trial" when logging a run to plot it here.</div>
+      </div>
+
+    </div>
+
+    <div class="col">
+
+      <div class="card">
+        <h2>Pace &amp; heart rate zones</h2>
+        <div class="zones">
+          <div class="zone"><div class="dot-label"><span class="dot" style="background:var(--zone-easy-l)"></span><span class="name">Easy</span></div><div class="pace" id="zEasy">—</div><div class="hr" id="zEasyHR">—</div><div class="feel">Conversational</div></div>
+          <div class="zone"><div class="dot-label"><span class="dot" style="background:var(--zone-tempo-l)"></span><span class="name">Tempo</span></div><div class="pace" id="zTempo">—</div><div class="hr" id="zTempoHR">—</div><div class="feel">Comfortably hard</div></div>
+          <div class="zone"><div class="dot-label"><span class="dot" style="background:var(--zone-interval-l)"></span><span class="name">Interval</span></div><div class="pace" id="zInterval">—</div><div class="hr" id="zIntervalHR">—</div><div class="feel">8–9 / 10 effort</div></div>
+          <div class="zone"><div class="dot-label"><span class="dot" style="background:var(--zone-strides-l)"></span><span class="name">Strides</span></div><div class="pace" id="zStrides">15–20s</div><div class="hr">Too short to register</div><div class="feel">Near-sprint, full recovery</div></div>
+        </div>
+        <div class="zonebasis" id="zoneBasis"></div>
+        <div class="hr-inputs">
+          <div class="field"><label for="maxHR">Max HR (bpm)</label><input type="number" id="maxHR" min="120" max="230" placeholder="190"></div>
+          <div class="field"><label for="restHR">Resting HR (bpm)</label><input type="number" id="restHR" min="30" max="100" placeholder="60"></div>
+        </div>
+        <div class="fineprint" style="margin-top:8px">Heart rate is estimated with the Karvonen (heart-rate-reserve) formula: resting&#8201;+&#8201;%&#8201;×&#8201;(max&#8201;−&#8201;resting). Treat pace as primary and HR as a sanity check — it drifts with heat, fatigue, and sleep.</div>
+      </div>
+
+      <div class="card">
+        <h2>Settings</h2>
+        <div class="settings-row">
+          <div class="field"><label for="startDate">Program start date</label><input type="date" id="startDate"></div>
+          <div class="field"><label for="weekOverride">Week override</label><input type="number" id="weekOverride" min="1" max="52" placeholder="auto"></div>
+          <div class="field"><label for="dayA">Run A day</label>
+            <select id="dayA"></select>
+          </div>
+          <div class="field"><label for="dayB">Run B day</label>
+            <select id="dayB"></select>
+          </div>
+          <div class="field"><label for="dayC">Run C day</label>
+            <select id="dayC"></select>
+          </div>
+          <div class="fineprint" id="dayWarning" style="display:none; color:var(--zone-interval-l)"></div>
+          <div class="field" style="flex:1 1 100%; min-width:260px;">
+            <label>File backup</label>
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+              <span class="fineprint" id="fileSyncStatus" style="margin:0;">Checking browser support…</span>
+              <button class="btn ghost" id="fileSyncBtn" type="button" style="display:none"></button>
+            </div>
+          </div>
+          <div class="btnrow">
+            <button class="btn ghost" id="exportBtn" type="button">Export backup</button>
+            <button class="btn ghost" id="importBtn" type="button">Import backup</button>
+            <button class="btn ghost" id="resetBtn" type="button" style="color:var(--zone-interval-l)">Reset all data</button>
+          </div>
+          <input type="file" id="importFile" accept="application/json" style="display:none">
+        </div>
+        <div class="fineprint">Data is saved to this browser's storage on every change, and — once you connect a backup file above — mirrored to that file too. Export a manual backup after logging a checkpoint, or before switching browsers/computers.</div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div id="viewStats" hidden>
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-text">
+          <span class="eyebrow">From your logged runs</span>
+          <h1>Statistics</h1>
+        </div>
+      </div>
+      <div class="topstat"><div class="sub" id="statsTag"></div></div>
+    </div>
+    <div class="card">
+      <div id="stats"></div>
+    </div>
+  </div>
+
+  <div id="viewBacklog" hidden>
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-text">
+          <span class="eyebrow">Ideas for Claude to build</span>
+          <h1>Development backlog</h1>
+        </div>
+      </div>
+      <div class="topstat"><div class="sub" id="backlogCount"></div></div>
+    </div>
+      <div class="card" id="backlogCard">
+                <form class="stack" id="ideaForm">
+          <div class="field"><label for="ideaApp">App</label><input type="text" id="ideaApp" list="ideaApps" placeholder="Which app is this for?" autocomplete="off"><datalist id="ideaApps"></datalist></div>
+          <div class="field"><label for="ideaText">Idea</label><textarea id="ideaText" placeholder="What should the app do next? Enter to add, Shift+Enter for a new line."></textarea></div>
+          <div class="btnrow">
+            <button type="submit" class="btn" id="ideaSubmit">Add idea</button>
+            <button type="button" class="btn ghost" id="ideaCancel" style="display:none">Cancel edit</button>
+            <button type="button" class="btn ghost" id="ideaCopy">Copy for Claude</button>
+          </div>
+        </form>
+        <div class="hist-filters" id="ideaFilters"></div>
+        <div id="ideaList"></div>
+        <div class="fineprint" id="backlogSync"></div>
+      </div>
+  </div>
+
+  <div id="viewGym" hidden>
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-text">
+          <span class="eyebrow">Koko keho · voima edellä</span>
+          <h1>Saliohjelma</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h2>Viikko-ohjelma</h2>
+        <p class="weeknote">Kolme salikäyntiä ja kolme juoksua viikossa. Salilla A ja B vuorottelevat: tee aina se, jota et tehnyt viimeksi.</p>
+        <div id="gymWeekNote"></div>
+        <div class="weekstrip" id="gymWeek">
+          <div class="wday gym"><span>Ma</span><b>Sali</b></div>
+          <div class="wday"><span>Ti</span><b>Juoksu</b><i>kevyt</i></div>
+          <div class="wday"><span>Ke</span><b>Juoksu</b><i>intervalli</i></div>
+          <div class="wday gym"><span>To</span><b>Sali</b></div>
+          <div class="wday rest"><span>Pe</span><b>Lepo</b></div>
+          <div class="wday gym"><span>La</span><b>Sali</b><i>kevyet jalat</i></div>
+          <div class="wday"><span>Su</span><b>Juoksu</b><i>pitkä</i></div>
+        </div>
+        <ul class="rules">
+          <li><b>Lauantaina kevennä jalkoja, koska sunnuntaina on pitkä lenkki.</b> Ylävartaloliikkeet tehdään täysillä.</li>
+          <li><b>Sali A lauantaina:</b> takakyykky 2 sarjaa ja 2 toistoa varastoon. Romanialaisen maastavedon tilalle takareiden koukistus.</li>
+          <li><b>Sali B lauantaina:</b> maastaveto 2 sarjaa ja 2 toistoa varastoon, noin 85&#8201;% tavallisista painoista. Askelkyykky kevyesti tai pois.</li>
+        </ul>
+      </div>
+
+      <div class="col" id="gymSessions"></div>
+
+      <div class="card">
+        <h2>Treenatut lihakset</h2>
+        <div id="gymMuscles"></div>
+      </div>
+
+      <div class="card">
+        <h2>Näin etenet</h2>
+        <ul class="rules">
+          <li><b>Kirjaa ylös.</b> Merkitse jokaisen sarjan paino ja toistot puhelimeen tai vihkoon. Kaikki alla olevat säännöt edellyttävät, että tiedät mitä teit viime kerralla, eikä tämä sivu seuraa sitä.</li>
+          <li><b>Kuinka kovaa.</b> Lopeta takakyykyssä ja maastavedossa, kun 2 hyvää toistoa on jäljellä; näiden puristaminen loppuun vie eniten palautumista, ja juoksusi maksaa siitä. Muissa 6 toiston liikkeissä lopeta, kun 1 toisto on jäljellä, paitsi viimeisessä sarjassa, jonka teet viimeiseen puhtaaseen toistoon asti. Pienissä liikkeissä tee jokainen sarja sinne asti. Näin vähillä sarjoilla lisäponnistus tuo hieman enemmän lihasta; voimaan se ei lisää mitään, ja siksi kahta isoa jalkaliikettä säästellään.</li>
+          <li><b>Palautus.</b> Noin 3 minuuttia kahdessa pääliikkeessä, 2 muissa 6 toiston liikkeissä ja dipissä ja 1 pienissä liikkeissä. Palautuksen lyhentäminen pienentää painoja, joita pystyt käyttämään, ja se vie pohjan harvoilta raskailta sarjoilta.</li>
+          <li><b>Tankoliikkeet ja leuanveto: lisää painoa.</b> Kun jokainen sarja yltää 6 toistoon, lisää seuraavalla kerralla 2,5&#8201;kg (takakyykyssä ja maastavedossa 5&#8201;kg niin kauan kuin ne kulkevat hyvin). On tavallista, että korotuksen jälkeen menee vain 4 tai 5; pidä paino, kunnes jokainen sarja on taas 6.</li>
+          <li><b>Käsipainoliikkeet: lisää ensin toistoja.</b> Seuraava käsipainokoko on iso hyppy, joten nosta vinopenkkipunnerruksessa, kulmasoudussa ja askelkyykyssä jokainen sarja 8 toistoon ennen kuin siirryt isompaan painoon, ja aloita sitten taas 5–6 toistosta.</li>
+          <li><b>Dippi: toistot edellä.</b> Tee kehonpainolla niin monta puhdasta toistoa kuin jaksat ja jätä yksi varastoon. Kun ensimmäinen sarja yltää 20 toistoon, laske 3 sekuntia alas ja pysähdy ala-asennossa.</li>
+          <li><b>Pienet liikkeet.</b> Pysy 10–12 toistossa ja siirry pienin mahdollinen askel ylöspäin, kun molemmat sarjat yltävät 12 toistoon.</li>
+          <li><b>Kaksi vai kolme sarjaa.</b> Käytä harmaata 3 sarjan vaihtoehtoa tavallisena treeninäsi, kun olet levännyt ja aikaa on. Pudota 2 sarjaan raskailla juoksuviikoilla tai kiireessä, ja pidä painot samoina kummassakin.</li>
+          <li><b>Mikä on edistystä.</b> Kahden vuoden salitaustalla edistysaskel tulee muutaman viikon välein, ei joka treenissä. Kun viikon juoksukilometrit nousevat, jalkaliikkeiden painojen pitäminen ennallaan on hyvä tulos.</li>
+          <li><b>Jumiutuminen.</b> Jos liikkeeseen ei ole tullut toistoa tai painoa kolmeen treeniin, tarkista ensin uni, ruoka ja se, onko juoksu juuri lisääntynyt. Jos mikään niistä ei selitä asiaa, ota 10&#8201;% pois, nouse takaisin 3–4 treenin aikana ja pyri ohittamaan vanha lukema. Jos liike jumittuu uudelleen, vaihda se muutamaksi viikoksi läheiseen muunnelmaan, kuten pysäytyskyykkyyn tai eri penkkikulmaan.</li>
+          <li><b>Kevennys ja tauot.</b> Kun juoksuohjelmassa on palautusviikko, nosta salillakin kevyemmin: samat liikkeet ja sarjat, noin 85&#8201;% tavallisista painoista. Sairastelun tai vähintään kahden viikon tauon jälkeen aloita noin 90&#8201;%:sta ja palaa entiselle tasolle kahden treenin aikana.</li>
+          <li><b>Lämmittely.</b> Tee ennen kahta pääliikettä 3–4 nousevaa lämmittelysarjaa, esimerkiksi tyhjä tanko × 8, 50&#8201;% × 5, 70&#8201;% × 3, 85&#8201;% × 1. Muihin liikkeisiin riittää yksi kevyempi sarja.</li>
+          <li><b>Lihaskasvu.</b> Kasvu seuraa viikon sarjamäärää ja ruokaa. 3 sarjan vaihtoehto ja kolmas viikkokäynti nostavat sarjamäärää; noin 1,6–2&#8201;g proteiinia painokiloa kohden päivässä ja riittävä uni hoitavat loput.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var STORAGE_KEY = "juoksu10k_v1";
+  var TOTAL_WEEKS = 52;
+
+  // ---------------- plan generation ----------------
+  var HARD = { A:[
+    null,
+    {A:"40 min easy + 4 × 20 sec strides", B:"60 min easy"},
+    {A:"40 min easy + 4 × 20 sec strides", B:"60 min easy"},
+    {A:"45 min easy + 5 × 20 sec strides", B:"65 min easy"},
+    {A:"45 min easy + 5 × 20 sec strides", B:"65 min easy"},
+    {A:"50 min easy + 6 × 20 sec strides", B:"70 min easy"},
+    {A:"50 min easy + 6 × 20 sec strides", B:"70 min easy"},
+    {A:"45 min easy + 6 × 20 sec strides", B:"75 min easy"},
+    {A:"30 min easy (recovery)", B:"Checkpoint: 10 km time trial", checkpoint:[58,60]}
+  ]};
+  var WEEKS_9_16 = [
+    {A:"10' warm-up, 6 × 2 min hard / 2 min jog, 10' cool-down", B:"70 min easy"},
+    {A:"10' warm-up, 6 × 2 min hard / 2 min jog, 10' cool-down", B:"70 min easy"},
+    {A:"10' warm-up, 8 × 2 min hard / 2 min jog, 10' cool-down", B:"75 min easy, last 10 min at tempo"},
+    {A:"10' warm-up, 8 × 2 min hard / 2 min jog, 10' cool-down", B:"75 min easy, last 10 min at tempo"},
+    {A:"10' warm-up, 5 × 3 min hard / 2 min jog, 10' cool-down", B:"80 min easy"},
+    {A:"10' warm-up, 5 × 3 min hard / 2 min jog, 10' cool-down", B:"80 min easy"},
+    {A:"10' warm-up, 20 min tempo, 10' cool-down", B:"60 min easy"},
+    {A:"30 min easy", B:"Checkpoint: 10 km time trial", checkpoint:[55,57]}
+  ];
+  var R4 = [
+    "5 × 1 km at goal race pace / 90 sec jog",
+    "3 × 2 km slightly slower than goal pace / 2 min jog",
+    "25–30 min tempo"
+  ];
+  var R5 = [
+    "6 × 1 km at goal pace / 75 sec jog",
+    "4 km at goal pace, 5 min jog, 2 km faster than goal pace",
+    "30 min tempo"
+  ];
+
+  var OPTIONAL_C_BY_PHASE = { 1:"20–25 min easy", 2:"25–30 min easy" };
+  function optionalC(phaseIdx, special){
+    if(special==="race") return "Rest";
+    if(special==="taper") return "20 min easy or rest (taper)";
+    if(special==="recovery") return "20 min easy or rest (recovery)";
+    if(special==="checkpoint") return "Rest or short walk (pre-checkpoint)";
+    return OPTIONAL_C_BY_PHASE[phaseIdx] + " (optional 3rd run)";
+  }
+  // mandatory 3rd run from Threshold Development (wk17) through the end of
+  // regular Race Sharpening weeks (wk49) — progresses 35 -> 55 min easy so
+  // weekly volume keeps climbing alongside the harder quality/tempo work
+  var THIRD_RUN_START = 17, THIRD_RUN_END = 49, THIRD_RUN_MIN = 35, THIRD_RUN_MAX = 55;
+  function thirdRunMinutes(w){
+    var t = clamp((w-THIRD_RUN_START)/(THIRD_RUN_END-THIRD_RUN_START), 0, 1);
+    return Math.round((THIRD_RUN_MIN + t*(THIRD_RUN_MAX-THIRD_RUN_MIN))/5)*5;
+  }
+  function mandatoryC(w){
+    return thirdRunMinutes(w) + " min easy (3rd run)";
+  }
+
+  function buildPlan(){
+    var plan = [null]; // 1-indexed
+    for(var w=1; w<=8; w++){
+      if(w===4){
+        plan[w] = {phase:"Base Building", phaseIdx:1, A:"30 min easy (recovery)", B:"40 min easy (recovery)", recovery:true};
+      } else {
+        plan[w] = Object.assign({phase:"Base Building", phaseIdx:1}, HARD.A[w]);
+      }
+      plan[w].C = optionalC(1, plan[w].checkpoint ? "checkpoint" : (plan[w].recovery ? "recovery" : null));
+    }
+    for(var w=9; w<=16; w++){
+      if(w===12){
+        plan[w] = {phase:"Introducing Speed", phaseIdx:2, A:"35 min easy (recovery)", B:"50 min easy (recovery)", recovery:true};
+      } else {
+        plan[w] = Object.assign({phase:"Introducing Speed", phaseIdx:2}, WEEKS_9_16[w-9]);
+      }
+      plan[w].C = optionalC(2, plan[w].checkpoint ? "checkpoint" : (plan[w].recovery ? "recovery" : null));
+    }
+
+    for(var w=17; w<=28; w++){
+      var e = {phase:"Threshold Development", phaseIdx:3};
+      if(w===22){
+        e.A = "40 min easy (recovery)"; e.B = "40 min easy (recovery)"; e.recovery = true;
+      } else if(w===28){
+        e.A = "20–25 min easy shakeout"; e.B = "Checkpoint: 10 km time trial"; e.checkpoint = [52,54];
+      } else if(w%2===1){
+        var idx = (w-17)/2;
+        var tempoMin = 20 + idx*2;
+        e.A = "10' warm-up → " + tempoMin + " min tempo → 10' cool-down";
+        e.B = "80–90 min easy";
+      } else {
+        e.A = "10' warm-up → 5 × 4 min hard / 2 min jog → 10' cool-down";
+        e.B = "80–90 min easy, last 15 min at tempo";
+      }
+      if(w===22){
+        e.C = optionalC(3, "recovery");
+      } else if(w===28){
+        e.C = optionalC(3, "checkpoint");
+      } else {
+        e.C = mandatoryC(w); e.cMandatory = true;
+      }
+      plan[w] = e;
+    }
+
+    for(var w=29; w<=40; w++){
+      var e = {phase:"Speed at Race Pace", phaseIdx:4};
+      if(w===34){
+        e.A = "40–45 min easy (recovery)"; e.B = "40–45 min easy (recovery)"; e.recovery = true;
+      } else if(w===40){
+        e.A = "20–25 min easy shakeout"; e.B = "Checkpoint: 10 km time trial"; e.checkpoint = [49,51];
+      } else {
+        var idx = (w-29) % 3;
+        e.A = "10' warm-up → " + R4[idx] + " → 10' cool-down";
+        e.B = "80–90 min easy with 6 × 20 sec strides at the end";
+      }
+      if(w===34){
+        e.C = optionalC(4, "recovery");
+      } else if(w===40){
+        e.C = optionalC(4, "checkpoint");
+      } else {
+        e.C = mandatoryC(w); e.cMandatory = true;
+      }
+      plan[w] = e;
+    }
+
+    for(var w=41; w<=52; w++){
+      var e = {phase:"Race Sharpening", phaseIdx:5};
+      if(w===45){
+        e.A = "40–45 min easy (recovery)"; e.B = "40–45 min easy (recovery)"; e.recovery = true;
+      } else if(w===50 || w===51){
+        e.A = "Taper: 4 × 1 km at goal pace"; e.B = "45–55 min easy (taper, ~ −40% volume)"; e.taper = true;
+      } else if(w===52){
+        e.A = "Rest / short shakeout"; e.B = "GOAL RACE or 10 km time trial"; e.checkpoint = [47,49]; e.race = true;
+      } else {
+        var idx = (w-41) % 3;
+        e.A = "10' warm-up → " + R5[idx] + " → 10' cool-down";
+        e.B = "75–90 min easy";
+      }
+      if(w===45){
+        e.C = optionalC(5, "recovery");
+      } else if(w===50 || w===51){
+        e.C = optionalC(5, "taper");
+      } else if(w===52){
+        e.C = optionalC(5, "race");
+      } else {
+        e.C = mandatoryC(w); e.cMandatory = true;
+      }
+      plan[w] = e;
+    }
+    return plan;
+  }
+  var PLAN = buildPlan();
+  var CHECKPOINT_WEEKS = [8,16,28,40,52];
+  var TARGET_GLIDE = [ [0,62], [8,59.1], [16,56.2], [28,53.3], [40,50.4], [52,48.0] ];
+  var PHASES = [
+    {name:"Base Building",          start:1,  end:8,  target:"~58–60 min"},
+    {name:"Introducing Speed",      start:9,  end:16, target:"~55–57 min"},
+    {name:"Threshold Development",  start:17, end:28, target:"~52–54 min"},
+    {name:"Speed at Race Pace",     start:29, end:40, target:"~49–51 min"},
+    {name:"Race Sharpening",        start:41, end:52, target:"~47–49 min"}
+  ];
+
+  // ---------------- state ----------------
+  function defaultState(){
+    return {
+      startDate: new Date().toISOString().slice(0,10),
+      weekOverride: null,
+      runs: [],           // {id,date,week,slot,durationMin,distanceKm,notes}
+      checkpoints: [],    // {id,week,minutes,date,avgHR}
+      maxHR: 190,
+      restingHR: 60,
+      preferredDays: { A:1, B:5, C:3 }, // 0=Sun..6=Sat; default Mon/Wed/Fri
+      backlog: []         // {id,text,created,built} — development ideas
+    };
+  }
+  // Ids of backlog ideas that have been implemented. The backlog itself lives
+  // in browser storage, which can't be edited from outside the app, so ideas
+  // are marked as built by listing their ids here.
+  var BUILT_IDEA_IDS = [];
+  var state;
+  function markBuiltIdeas(){
+    state.backlog.forEach(function(i){ if(BUILT_IDEA_IDS.indexOf(i.id) !== -1) i.built = true; });
+  }
+  function load(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      state = raw ? Object.assign(defaultState(), JSON.parse(raw)) : defaultState();
+    }catch(e){ state = defaultState(); }
+    var today = new Date().toISOString().slice(0,10);
+    state.checkpoints.forEach(function(c){ if(!c.date) c.date = today; });
+    markBuiltIdeas();
+  }
+  function save(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); render(); writeStateToFile(); }
+  function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+
+  // ---------------- optional file-system backup sync ----------------
+  // Mirrors state to a JSON file the user picks, using the File System
+  // Access API (Chrome/Edge only). localStorage stays the source of truth;
+  // this is a best-effort mirror, not a replacement.
+  var FS_SUPPORTED = !!(window.showSaveFilePicker && window.indexedDB);
+  var fileHandle = null;
+  var fileSyncState = "unsupported";
+  var IDB_NAME = "juoksu10k_files", IDB_STORE = "handles", IDB_KEY = "backupFile";
+
+  function idbOpen(){
+    return new Promise(function(resolve, reject){
+      var req = indexedDB.open(IDB_NAME, 1);
+      req.onupgradeneeded = function(){ req.result.createObjectStore(IDB_STORE); };
+      req.onsuccess = function(){ resolve(req.result); };
+      req.onerror = function(){ reject(req.error); };
+    });
+  }
+  function idbGet(key){
+    return idbOpen().then(function(db){
+      return new Promise(function(resolve, reject){
+        var req = db.transaction(IDB_STORE, "readonly").objectStore(IDB_STORE).get(key);
+        req.onsuccess = function(){ resolve(req.result || null); };
+        req.onerror = function(){ reject(req.error); };
+      });
+    });
+  }
+  function idbSet(key, value){
+    return idbOpen().then(function(db){
+      return new Promise(function(resolve, reject){
+        var tx = db.transaction(IDB_STORE, "readwrite");
+        tx.objectStore(IDB_STORE).put(value, key);
+        tx.oncomplete = function(){ resolve(); };
+        tx.onerror = function(){ reject(tx.error); };
+      });
+    });
+  }
+  function idbDelete(key){
+    return idbOpen().then(function(db){
+      return new Promise(function(resolve, reject){
+        var tx = db.transaction(IDB_STORE, "readwrite");
+        tx.objectStore(IDB_STORE).delete(key);
+        tx.oncomplete = function(){ resolve(); };
+        tx.onerror = function(){ reject(tx.error); };
+      });
+    });
+  }
+
+  function updateFileSyncUI(status){
+    fileSyncState = status;
+    renderBacklogSync();
+    var statusEl = document.getElementById("fileSyncStatus");
+    var btn = document.getElementById("fileSyncBtn");
+    if(!statusEl || !btn) return;
+    if(status==="unsupported"){
+      statusEl.textContent = "Not supported in this browser (Chrome/Edge only) — use Export/Import instead.";
+      btn.style.display = "none";
+    } else if(status==="disconnected"){
+      statusEl.textContent = "Not connected — data lives only in this browser's storage.";
+      btn.textContent = "Connect backup file…";
+      btn.style.display = "inline-block";
+    } else if(status==="connected"){
+      var when = new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+      statusEl.textContent = "✓ Auto-saving to " + (fileHandle ? fileHandle.name : "file") + " (last write " + when + ")";
+      btn.textContent = "Disconnect";
+      btn.style.display = "inline-block";
+    } else if(status==="reconnect"){
+      statusEl.textContent = "⚠ Access to the backup file needs to be reconfirmed.";
+      btn.textContent = "Reconnect access";
+      btn.style.display = "inline-block";
+    } else if(status==="error"){
+      statusEl.textContent = "⚠ Couldn't write to the backup file — check it still exists.";
+      btn.textContent = "Reconnect";
+      btn.style.display = "inline-block";
+    }
+  }
+
+  function connectBackupFile(){
+    window.showSaveFilePicker({
+      suggestedName: "juoksu-10k-backup.json",
+      types: [{ description: "JSON backup", accept: {"application/json": [".json"]} }]
+    }).then(function(handle){
+      fileHandle = handle;
+      return idbSet(IDB_KEY, handle).then(function(){ return writeStateToFile(); });
+    }).catch(function(err){
+      if(err && err.name !== "AbortError") console.error("Backup file connect failed", err);
+    });
+  }
+  function reconnectBackupFile(){
+    if(!fileHandle) return;
+    fileHandle.requestPermission({mode:"readwrite"}).then(function(perm){
+      if(perm === "granted") return writeStateToFile();
+      updateFileSyncUI("reconnect");
+    }).catch(function(){ updateFileSyncUI("disconnected"); });
+  }
+  function disconnectBackupFile(){
+    fileHandle = null;
+    idbDelete(IDB_KEY).then(function(){ updateFileSyncUI("disconnected"); });
+  }
+  function writeStateToFile(){
+    if(!fileHandle) return;
+    fileHandle.queryPermission({mode:"readwrite"}).then(function(perm){
+      if(perm !== "granted"){ updateFileSyncUI("reconnect"); return; }
+      return fileHandle.createWritable().then(function(writable){
+        return writable.write(JSON.stringify(state, null, 2)).then(function(){ return writable.close(); });
+      }).then(function(){ updateFileSyncUI("connected"); });
+    }).catch(function(err){
+      console.error("Backup file write failed", err);
+      updateFileSyncUI("error");
+    });
+  }
+  function restoreBackupFileHandle(){
+    if(!FS_SUPPORTED){ updateFileSyncUI("unsupported"); return; }
+    idbGet(IDB_KEY).then(function(handle){
+      if(!handle){ updateFileSyncUI("disconnected"); return; }
+      fileHandle = handle;
+      return fileHandle.queryPermission({mode:"readwrite"}).then(function(perm){
+        updateFileSyncUI(perm === "granted" ? "connected" : "reconnect");
+      });
+    }).catch(function(){ updateFileSyncUI("disconnected"); });
+  }
+
+  // ---------------- helpers ----------------
+  function clamp(n,lo,hi){ return Math.max(lo, Math.min(hi, n)); }
+  function readDecimal(id){
+    var raw = document.getElementById(id).value;
+    if(!raw) return null;
+    var n = Number(String(raw).trim().replace(",", "."));
+    return isFinite(n) && n>0 ? n : null;
+  }
+  function readHR(id){
+    var v = Number(document.getElementById(id || "rHR").value);
+    return v>0 ? clamp(Math.round(v), 60, 230) : null;
+  }
+  function readDuration(){
+    var h = clamp(Number(document.getElementById("rDurH").value) || 0, 0, 23);
+    var m = clamp(Number(document.getElementById("rDurM").value) || 0, 0, 59);
+    var s = clamp(Number(document.getElementById("rDurS").value) || 0, 0, 59);
+    var total = h*60 + m + s/60;
+    return total>0 ? total : null;
+  }
+  function fillDuration(totalMin){
+    var totalSec = totalMin>0 ? Math.round(totalMin*60) : 0;
+    var h = Math.floor(totalSec/3600);
+    var m = Math.floor((totalSec%3600)/60);
+    var s = totalSec%60;
+    document.getElementById("rDurH").value = h || "";
+    document.getElementById("rDurM").value = m || "";
+    document.getElementById("rDurS").value = s || "";
+  }
+  function fmtDuration(totalMin){
+    if(!(totalMin>0)) return "—";
+    var totalSec = Math.round(totalMin*60);
+    var h = Math.floor(totalSec/3600);
+    var m = Math.floor((totalSec%3600)/60);
+    var s = totalSec%60;
+    var mm = h>0 ? (m<10?"0":"")+m : m;
+    var ss = (s<10?"0":"")+s;
+    return (h>0 ? h+":" : "") + mm + ":" + ss;
+  }
+  // stored dates are ISO (yyyy-mm-dd); shown as dd.mm.yyyy
+  function fmtDate(iso){
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || "");
+    return m ? m[3] + "." + m[2] + "." + m[1] : (iso || "");
+  }
+  function fmtPace(minPerKm){
+    var m = Math.floor(minPerKm);
+    var s = Math.round((minPerKm - m)*60);
+    if(s===60){ m++; s=0; }
+    return m + ":" + (s<10?"0":"") + s;
+  }
+  function fmtClock(totalMin){
+    var m = Math.floor(totalMin);
+    var s = Math.round((totalMin-m)*60);
+    if(s===60){ m++; s=0; }
+    return m + ":" + (s<10?"0":"") + s;
+  }
+  // week 1 runs from the anchor date through the following Sunday; every
+  // week after that is a full Mon–Sun calendar week
+  function weekNumberBetween(anchor, target){
+    var endOfWeek1 = new Date(anchor);
+    endOfWeek1.setHours(0,0,0,0);
+    endOfWeek1.setDate(endOfWeek1.getDate() + ((7 - endOfWeek1.getDay()) % 7));
+    var d = new Date(target);
+    d.setHours(0,0,0,0);
+    if(d <= endOfWeek1) return 1;
+    var daysAfter = Math.floor((d - endOfWeek1) / 86400000);
+    return clamp(1 + Math.ceil(daysAfter/7), 1, TOTAL_WEEKS);
+  }
+  function firstSessionDate(){
+    var dates = state.runs.map(function(r){ return r.date; }).filter(Boolean).sort();
+    return dates.length ? dates[0] : null;
+  }
+  function currentWeekFromDate(){
+    var anchor = firstSessionDate() || state.startDate;
+    var start = new Date(anchor + "T00:00:00");
+    var now = new Date();
+    return weekNumberBetween(start, now);
+  }
+  function currentWeek(){
+    if(state.weekOverride && state.weekOverride>=1 && state.weekOverride<=52) return state.weekOverride;
+    return currentWeekFromDate();
+  }
+  function weekFromSessionDate(dateStr, firstDate){
+    if(!dateStr || !firstDate) return null;
+    var start = new Date(firstDate + "T00:00:00");
+    var d = new Date(dateStr + "T00:00:00");
+    return weekNumberBetween(start, d);
+  }
+  function latestCheckpoint(){
+    if(!state.checkpoints.length) return null;
+    var sorted = state.checkpoints.slice().sort(function(a,b){ return a.week - b.week; });
+    return sorted[sorted.length-1];
+  }
+  function latestCheckpointMinutes(){
+    var cp = latestCheckpoint();
+    return cp ? cp.minutes : 62;
+  }
+  function zonesFor(pace){
+    return {
+      easy: [pace+0.75, pace+1.25],
+      tempo: [pace, pace+0.17],
+      interval: [pace-0.33, pace-0.17]
+    };
+  }
+  var HR_PCT = { easy:[0.60,0.70], tempo:[0.80,0.87], interval:[0.90,0.95] };
+  function hrFor(pctRange){
+    var max = Number(state.maxHR) || 190;
+    var rest = Number(state.restingHR) || 60;
+    var reserve = Math.max(max - rest, 1);
+    return [
+      Math.round(rest + pctRange[0]*reserve),
+      Math.round(rest + pctRange[1]*reserve)
+    ];
+  }
+
+  // ---------------- rendering ----------------
+  function renderTop(){
+    var wk = currentWeek();
+    var entry = PLAN[wk];
+    document.getElementById("phaseName").textContent = entry.phase;
+    document.getElementById("weekValue").textContent = wk + " / 52";
+    var sub = entry.recovery ? "Recovery week" : entry.taper ? "Taper" : entry.race ? "Race week" : entry.checkpoint ? "Checkpoint week" : "";
+    document.getElementById("weekSub").textContent = sub || " ";
+
+    var nextCp = CHECKPOINT_WEEKS.find(function(w){ return w>=wk; });
+    if(nextCp){
+      document.getElementById("checkpointValue").textContent = "Week " + nextCp;
+      var target = TARGET_GLIDE.find(function(t){return t[0]===nextCp;});
+      document.getElementById("checkpointSub").textContent = (nextCp-wk===0? "this week" : "in " + (nextCp-wk) + " wk") + (target? " · target ~" + Math.round(target[1]) + "m" : "");
+    } else {
+      document.getElementById("checkpointValue").textContent = "Done";
+      document.getElementById("checkpointSub").textContent = "program complete";
+    }
+
+    var pb = state.checkpoints.length ? Math.min.apply(null, state.checkpoints.map(function(c){return c.minutes;})) : 62;
+    document.getElementById("pbValue").textContent = fmtClock(pb);
+    var lastCp = latestCheckpoint();
+    document.getElementById("pbSub").textContent = lastCp ? "last logged: " + (lastCp.date ? fmtDate(lastCp.date) : "week " + lastCp.week) : "baseline (no checkpoint yet)";
+
+    document.getElementById("yearBar").style.width = (wk/52*100).toFixed(1) + "%";
+    var marksEl = document.getElementById("yearMarks");
+    if(!marksEl.dataset.built){
+      CHECKPOINT_WEEKS.forEach(function(w){
+        var b = document.createElement("b");
+        b.style.left = (w/52*100) + "%";
+        marksEl.appendChild(b);
+      });
+      marksEl.dataset.built = "1";
+    }
+  }
+
+  var WORKOUT_KEYWORDS = /(goal race pace|goal pace|race pace|warm-up|cool-down|shakeout|recovery|tempo|hard|strides|jog|easy)/gi;
+  var WORKOUT_ZONE = {
+    "goal race pace":"interval", "goal pace":"interval", "race pace":"interval",
+    "warm-up":"easy", "cool-down":"easy", "shakeout":"easy", "recovery":"easy", "jog":"easy", "easy":"easy",
+    "tempo":"tempo",
+    "hard":"interval",
+    "strides":"strides"
+  };
+  function colorizeWorkout(text){
+    return text.replace(WORKOUT_KEYWORDS, function(m){
+      var zone = WORKOUT_ZONE[m.toLowerCase()];
+      return zone ? '<span class="wpace wpace-'+zone+'">'+m+'</span>' : m;
+    });
+  }
+
+  // ---------------- weekly distance estimate ----------------
+  // The plan is written mostly in minutes, so kilometres are estimated by
+  // running each segment at the midpoint of its pace zone, with zones taken
+  // from the 10 km time the target glide path expects for that week.
+  function glideMinutes(week){
+    for(var i=1; i<TARGET_GLIDE.length; i++){
+      var a = TARGET_GLIDE[i-1], b = TARGET_GLIDE[i];
+      if(week<=b[0]) return a[1] + (b[1]-a[1])*(week-a[0])/(b[0]-a[0]);
+    }
+    return TARGET_GLIDE[TARGET_GLIDE.length-1][1];
+  }
+  var QUANTITY = /(?:(\d+)\s*×\s*)?(\d+)(?:–(\d+))?\s*(min|sec|km|')/g;
+  function estimateKm(text, week){
+    var pace = glideMinutes(week)/10, z = zonesFor(pace);
+    var zonePace = {
+      easy:(z.easy[0]+z.easy[1])/2, tempo:(z.tempo[0]+z.tempo[1])/2,
+      interval:(z.interval[0]+z.interval[1])/2, strides:pace-1.5
+    };
+    var matches = [], m;
+    QUANTITY.lastIndex = 0;
+    while((m = QUANTITY.exec(text))) matches.push(m);
+    var km = 0, prevReps = 1;
+    matches.forEach(function(m, i){
+      var before = text.slice(i ? matches[i-1].index + matches[i-1][0].length : 0, m.index);
+      var after = text.slice(m.index + m[0].length, i+1<matches.length ? matches[i+1].index : text.length);
+      // a recovery jog written after "/" repeats with the reps before it
+      var reps = m[1] ? Number(m[1]) : (before.indexOf("/") !== -1 ? prevReps : 1);
+      prevReps = reps;
+      var amount = reps * (m[3] ? (Number(m[2])+Number(m[3]))/2 : Number(m[2]));
+      if(m[4]==="km"){ km += amount; return; }
+      var minutes = m[4]==="sec" ? amount/60 : amount;
+      var kw = after.match(WORKOUT_KEYWORDS);
+      var zone = (kw && WORKOUT_ZONE[kw[0].toLowerCase()]) || "easy";
+      km += minutes / zonePace[zone];
+      // "last 10 min at tempo" is part of the easy run before it, not extra time
+      if(/last\s*$/.test(before)) km -= minutes / zonePace.easy;
+    });
+    return km;
+  }
+  // total = runs A and B plus a mandatory run C; an optional run C is kept apart
+  var WEEK_KM = PLAN.map(function(entry, w){
+    if(!entry) return null;
+    var c = estimateKm(entry.C, w);
+    return {
+      total: estimateKm(entry.A, w) + estimateKm(entry.B, w) + (entry.cMandatory ? c : 0),
+      optional: entry.cMandatory ? 0 : c
+    };
+  });
+
+  function runCountsByWeek(){
+    var counts = {};
+    var firstDate = firstSessionDate();
+    state.runs.forEach(function(r){
+      var wk = weekFromSessionDate(r.date, firstDate) || r.week;
+      if(!wk) return;
+      counts[wk] = counts[wk] || {A:0,B:0,C:0,km:0};
+      if(r.distanceKm>0) counts[wk].km += r.distanceKm;
+      if(r.checkpoint){
+        // Only counts toward Run B's done-mark if B is actually scheduled as the checkpoint that week.
+        if(PLAN[wk] && PLAN[wk].checkpoint) counts[wk].B = (counts[wk].B||0) + 1;
+      } else {
+        counts[wk][r.slot] = (counts[wk][r.slot]||0) + 1;
+      }
+    });
+    return counts;
+  }
+  function doneMark(n){
+    if(!n) return "";
+    var marks = new Array(Math.min(n,3)+1).join("&#10003;");
+    var extra = n>3 ? "+"+(n-3) : "";
+    return ' <span class="donemark" title="Logged '+n+'&times; this week">'+marks+extra+'</span>';
+  }
+
+  function renderFullProgram(){
+    var container = document.getElementById("fullProgram");
+    var wk = currentWeek();
+    var runCounts = runCountsByWeek();
+
+    var openMap = {};
+    container.querySelectorAll("details.phase-group").forEach(function(d){ openMap[d.dataset.phase] = d.open; });
+
+    var html = PHASES.map(function(phase){
+      var total = phase.end - phase.start + 1;
+      var done = clamp(wk - phase.start, 0, total);
+      var rows = "";
+      for(var w=phase.start; w<=phase.end; w++){
+        var entry = PLAN[w];
+        var rowClass = w===wk ? "current" : (w<wk ? "past" : "");
+        var pill = entry.race ? '<span class="pill tag-race">Race</span>'
+          : entry.checkpoint ? '<span class="pill tag-checkpoint">Checkpoint</span>'
+          : entry.taper ? '<span class="pill tag-taper">Taper</span>'
+          : entry.recovery ? '<span class="pill tag-recovery">Recovery</span>' : "";
+        var wc = runCounts[w] || {A:0,B:0,C:0,km:0};
+        var cOptClass = entry.cMandatory ? "" : " optional";
+        rows += '<tr class="'+rowClass+'"><td class="wk">'+w+'</td>' +
+          '<td class="slotcell"><b>A</b>&nbsp;'+colorizeWorkout(entry.A)+doneMark(wc.A)+'</td>' +
+          '<td class="slotcell"><b>B</b>&nbsp;'+colorizeWorkout(entry.B)+pill+doneMark(wc.B)+'</td>' +
+          '<td class="slotcell'+cOptClass+'"><b>C</b>&nbsp;'+colorizeWorkout(entry.C||"—")+doneMark(wc.C)+'</td>' +
+          '<td class="wk">~'+Math.round(WEEK_KM[w].total)+' km' +
+          (Math.round(WEEK_KM[w].optional) ? '<div class="kmopt">~'+Math.round(WEEK_KM[w].total + WEEK_KM[w].optional)+' with run C</div>' : '')+'</td>' +
+          '<td class="wk">'+(wc.km ? fmtKm(wc.km) : "—")+'</td></tr>';
+      }
+      var isCurrentPhase = wk>=phase.start && wk<=phase.end;
+      var open = openMap.hasOwnProperty(phase.name) ? openMap[phase.name] : isCurrentPhase;
+      var metaLabel = done>=total ? "done" : (done + "/" + total);
+      return '<details class="phase-group" data-phase="'+phase.name+'"'+(open?" open":"")+'>' +
+        '<summary><span class="ptitle"><span class="chev"></span><span class="pname">'+phase.name+'</span>' +
+        '<span class="prange">Weeks '+phase.start+'–'+phase.end+' · target '+phase.target+'</span></span>' +
+        '<span class="pmeta'+(done>=total?" done":"")+'">'+metaLabel+'</span></summary>' +
+        '<div class="tablewrap"><table class="progtable"><thead><tr><th>Wk</th><th>Run A · quality</th><th>Run B · endurance</th><th>Run C</th><th>Est.&nbsp;km</th><th>Actual&nbsp;km</th></tr></thead>' +
+        '<tbody>'+rows+'</tbody></table></div>' +
+      '</details>';
+    }).join("");
+
+    container.innerHTML = html;
+    document.getElementById("programTag").textContent = "Week " + wk + " of 52";
+  }
+
+  var DAY_NAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var DAY_NAMES_SHORT = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+  function minRestDays(d1, d2){
+    if(d1===d2) return -1;
+    var fwd = (d2-d1+7)%7, bwd = (d1-d2+7)%7;
+    return Math.min(fwd,bwd) - 1;
+  }
+  function renderDayWarning(){
+    var pd = state.preferredDays;
+    var pairs = [["A","B"],["A","C"],["B","C"]];
+    var worst = pairs.map(function(p){
+      return { a:p[0], b:p[1], rest: minRestDays(pd[p[0]], pd[p[1]]) };
+    }).filter(function(x){ return x.rest<=0; }).sort(function(x,y){ return x.rest-y.rest; })[0];
+    var el = document.getElementById("dayWarning");
+    if(worst){
+      var msg = worst.rest<0
+        ? "Run " + worst.a + " and Run " + worst.b + " are on the same day."
+        : "Run " + worst.a + " and Run " + worst.b + " are on back-to-back days — no rest day between them.";
+      el.textContent = "⚠ " + msg + " Aim for at least 1 full rest day, ideally 2, between sessions.";
+      el.style.display = "block";
+    } else {
+      el.style.display = "none";
+    }
+  }
+  function renderZones(){
+    var pace = latestCheckpointMinutes() / 10;
+    var z = zonesFor(pace);
+    document.getElementById("zEasy").textContent = fmtPace(z.easy[0]) + "–" + fmtPace(z.easy[1]);
+    document.getElementById("zTempo").textContent = fmtPace(z.tempo[0]) + "–" + fmtPace(z.tempo[1]);
+    document.getElementById("zInterval").textContent = fmtPace(z.interval[0]) + "–" + fmtPace(z.interval[1]);
+
+    var hrEasy = hrFor(HR_PCT.easy), hrTempo = hrFor(HR_PCT.tempo), hrInterval = hrFor(HR_PCT.interval);
+    document.getElementById("zEasyHR").textContent = hrEasy[0] + "–" + hrEasy[1] + " bpm";
+    document.getElementById("zTempoHR").textContent = hrTempo[0] + "–" + hrTempo[1] + " bpm";
+    document.getElementById("zIntervalHR").textContent = hrInterval[0] + "–" + hrInterval[1] + " bpm";
+
+    var basis = state.checkpoints.length
+      ? "Based on your " + fmtClock(latestCheckpointMinutes()) + " checkpoint. Re-test every 8–12 weeks and these will update."
+      : "Baseline paces for a 62-minute 10 km. Log a checkpoint time trial to sharpen these.";
+    document.getElementById("zoneBasis").textContent = basis;
+    document.getElementById("maxHR").value = state.maxHR || "";
+    document.getElementById("restHR").value = state.restingHR || "";
+  }
+
+  var histFilter = "all";
+  var editingRunId = null;
+  var editingOrphanCpId = null;
+
+  function startRunEdit(id){
+    var r = state.runs.find(function(x){ return x.id===id; });
+    if(!r) return;
+    editingRunId = id;
+    editingOrphanCpId = null;
+    document.getElementById("rDate").value = r.date;
+    document.getElementById("rSlot").value = r.checkpoint ? "CP" : r.slot;
+    fillDuration(r.durationMin);
+    document.getElementById("rDist").value = r.distanceKm || "";
+    document.getElementById("rHR").value = r.avgHR || "";
+    document.getElementById("rNotes").value = r.notes || "";
+    document.getElementById("runFormSubmit").textContent = "Save changes";
+    document.getElementById("runFormCancel").style.display = "inline-block";
+    document.getElementById("runForm").scrollIntoView({behavior:"smooth", block:"center"});
+  }
+  function cancelRunEdit(){
+    editingRunId = null;
+    editingOrphanCpId = null;
+    document.getElementById("rDurH").value = "";
+    document.getElementById("rDurM").value = "";
+    document.getElementById("rDurS").value = "";
+    document.getElementById("rDist").value = "";
+    document.getElementById("rHR").value = "";
+    document.getElementById("rNotes").value = "";
+    document.getElementById("rNotes").placeholder = "How did it feel? Weather, terrain, RPE…";
+    document.getElementById("rDate").value = new Date().toISOString().slice(0,10);
+    document.getElementById("runFormSubmit").textContent = "Add run";
+    document.getElementById("runFormCancel").style.display = "none";
+  }
+  // Legacy standalone checkpoints (logged before checkpoints were folded into
+  // the run form) have no linked run. Editing one repopulates the run form so
+  // saving promotes it into a full run entry with checkpoint:true.
+  function startCpEdit(id){
+    var c = state.checkpoints.find(function(x){ return x.id===id; });
+    if(!c) return;
+    editingRunId = null;
+    editingOrphanCpId = id;
+    document.getElementById("rDate").value = c.date || new Date().toISOString().slice(0,10);
+    document.getElementById("rSlot").value = "CP";
+    fillDuration(c.minutes);
+    document.getElementById("rDist").value = "";
+    document.getElementById("rHR").value = c.avgHR || "";
+    document.getElementById("rNotes").value = "";
+    document.getElementById("runFormSubmit").textContent = "Save changes";
+    document.getElementById("runFormCancel").style.display = "inline-block";
+    document.getElementById("runForm").scrollIntoView({behavior:"smooth", block:"center"});
+  }
+  function syncCheckpointForRun(run){
+    if(run.checkpoint && run.durationMin){
+      var week = weekFromSessionDate(run.date, firstSessionDate()) || run.week || currentWeek();
+      var cp = state.checkpoints.find(function(c){ return c.runId===run.id; });
+      if(!cp){
+        cp = { id: uid(), runId: run.id };
+        state.checkpoints.push(cp);
+      }
+      cp.week = clamp(week,0,52);
+      cp.minutes = run.durationMin;
+      cp.date = run.date;
+      cp.avgHR = run.avgHR;
+    } else {
+      state.checkpoints = state.checkpoints.filter(function(c){ return c.runId !== run.id; });
+    }
+  }
+
+  function renderHistory(){
+    var filters = [["all","All"],["A","Run A"],["B","Run B"],["C","Run C"],["cp","Checkpoints"]];
+    var fhtml = filters.map(function(f){
+      return '<button class="chip'+(histFilter===f[0]?' active':'')+'" data-f="'+f[0]+'">'+f[1]+'</button>';
+    }).join("");
+    document.getElementById("histFilters").innerHTML = fhtml;
+    document.querySelectorAll("#histFilters .chip").forEach(function(c){
+      c.addEventListener("click", function(){ histFilter = c.dataset.f; renderHistory(); });
+    });
+
+    var rows = [];
+    var firstDate = firstSessionDate();
+    var linkedCpIds = {};
+    state.runs.forEach(function(r){ if(r.checkpoint){ var cp = state.checkpoints.find(function(c){return c.runId===r.id;}); if(cp) linkedCpIds[cp.id] = true; } });
+    state.runs.forEach(function(r){ rows.push({type:"run", date:r.date, week:weekFromSessionDate(r.date, firstDate) || r.week, slot:r.slot, dur:r.durationMin, dist:r.distanceKm, hr:r.avgHR, notes:r.notes, id:r.id, checkpoint:r.checkpoint}); });
+    // orphan checkpoints logged before the run form absorbed checkpoint logging
+    state.checkpoints.forEach(function(c){ if(!linkedCpIds[c.id]) rows.push({type:"cp", date:c.date||null, week:c.week, minutes:c.minutes, hr:c.avgHR, id:c.id}); });
+    rows.sort(function(a,b){
+      if(a.week !== b.week) return b.week - a.week;
+      return (b.date||"").localeCompare(a.date||"");
+    });
+    if(histFilter==="A") rows = rows.filter(function(r){return r.type==="run" && r.slot==="A";});
+    if(histFilter==="B") rows = rows.filter(function(r){return r.type==="run" && r.slot==="B";});
+    if(histFilter==="C") rows = rows.filter(function(r){return r.type==="run" && r.slot==="C";});
+    if(histFilter==="cp") rows = rows.filter(function(r){return r.type==="cp" || r.checkpoint;});
+
+    document.getElementById("histCount").textContent = rows.length ? rows.length + " entries" : "";
+    var body = document.getElementById("histBody");
+    if(!rows.length){
+      body.innerHTML = "";
+      document.getElementById("histEmpty").style.display = "block";
+      return;
+    }
+    document.getElementById("histEmpty").style.display = "none";
+    body.innerHTML = rows.map(function(r){
+      if(r.type==="cp"){
+        return '<tr><td class="num">'+(r.date ? fmtDate(r.date) : "—")+'</td><td class="num">'+r.week+'</td>' +
+          '<td><span class="rowtag" style="background:var(--chart-actual)">CHECKPOINT</span></td>' +
+          '<td class="num">'+fmtClock(r.minutes)+'</td><td class="num">10.0 km</td><td class="num">'+(r.minutes>0 ? fmtPace(r.minutes/10)+" /km" : "—")+'</td><td class="num">'+(r.hr? r.hr+" bpm":"—")+'</td><td class="notes">10 km time trial</td>' +
+          '<td><div class="rowactions">' +
+          '<button class="edit" data-type="cp" data-id="'+r.id+'" title="Edit">&#9998;</button>' +
+          '<button class="del" data-type="cp" data-id="'+r.id+'" title="Delete">&times;</button>' +
+          '</div></td></tr>';
+      }
+      var tagColor = r.slot==="A" ? "var(--zone-interval-l)" : r.slot==="B" ? "var(--zone-strides-l)" : "var(--zone-easy-l)";
+      var slotTag = r.checkpoint
+        ? '<span class="rowtag" style="background:var(--chart-actual)">CHECKPOINT</span>'
+        : '<span class="rowtag" style="background:'+tagColor+'">Run '+r.slot+'</span>';
+      return '<tr><td class="num">'+fmtDate(r.date)+'</td><td class="num">'+r.week+'</td>' +
+        '<td>'+slotTag+'</td>' +
+        '<td class="num">'+fmtDuration(r.dur)+'</td><td class="num">'+(r.dist? r.dist+" km":"—")+'</td>' +
+        '<td class="num">'+(r.dist>0 && r.dur>0 ? fmtPace(r.dur/r.dist)+" /km" : "—")+'</td>' +
+        '<td class="num">'+(r.hr? r.hr+" bpm":"—")+'</td>' +
+        '<td class="notes">'+(r.notes? escapeHtml(r.notes):"—")+'</td>' +
+        '<td><div class="rowactions">' +
+        '<button class="edit" data-type="run" data-id="'+r.id+'" title="Edit">&#9998;</button>' +
+        '<button class="del" data-type="run" data-id="'+r.id+'" title="Delete">&times;</button>' +
+        '</div></td></tr>';
+    }).join("");
+    body.querySelectorAll(".del").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        if(!confirm("Delete this entry? This can't be undone.")) return;
+        if(btn.dataset.type==="run"){
+          state.checkpoints = state.checkpoints.filter(function(c){return c.runId!==btn.dataset.id;});
+          state.runs = state.runs.filter(function(x){return x.id!==btn.dataset.id;});
+          if(editingRunId===btn.dataset.id) cancelRunEdit();
+        } else {
+          state.checkpoints = state.checkpoints.filter(function(x){return x.id!==btn.dataset.id;});
+          if(editingOrphanCpId===btn.dataset.id) cancelRunEdit();
+        }
+        save();
+      });
+    });
+    body.querySelectorAll(".edit").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        if(btn.dataset.type==="run") startRunEdit(btn.dataset.id);
+        else startCpEdit(btn.dataset.id);
+      });
+    });
+  }
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; });
+  }
+
+  function renderChart(){
+    var svg = document.getElementById("chartSvg");
+    var W = 460, H = 200, padL = 34, padR = 14, padT = 14, padB = 26;
+    var innerW = W - padL - padR, innerH = H - padT - padB;
+    var minY = 40, maxY = 64;
+
+    function x(week){ return padL + (week/52)*innerW; }
+    function y(min){ return padT + (1 - (min-minY)/(maxY-minY))*innerH; }
+
+    var parts = [];
+    // gridlines + week axis labels
+    [0,8,16,28,40,52].forEach(function(w){
+      parts.push('<line class="grid-line" x1="'+x(w)+'" y1="'+padT+'" x2="'+x(w)+'" y2="'+(padT+innerH)+'"/>');
+      parts.push('<text class="axis-label" x="'+x(w)+'" y="'+(H-8)+'" text-anchor="middle">'+w+'</text>');
+    });
+    [45,50,55,60].forEach(function(m){
+      parts.push('<line class="grid-line" x1="'+padL+'" y1="'+y(m)+'" x2="'+(padL+innerW)+'" y2="'+y(m)+'"/>');
+      parts.push('<text class="axis-label" x="'+(padL-6)+'" y="'+(y(m)+3)+'" text-anchor="end">'+m+'</text>');
+    });
+
+    // target glide path
+    var tPath = TARGET_GLIDE.map(function(p,i){ return (i===0?"M":"L") + x(p[0]).toFixed(1) + " " + y(p[1]).toFixed(1); }).join(" ");
+    parts.push('<path class="target-line" d="'+tPath+'"/>');
+
+    // actual checkpoints
+    var pts = [[0,62]].concat(state.checkpoints.slice().sort(function(a,b){return a.week-b.week;}).map(function(c){return [c.week, c.minutes];}));
+    var hoverData = pts.slice(1); // exclude synthetic baseline from hover targets, keep for line
+    if(pts.length>1){
+      var aPath = pts.map(function(p,i){ return (i===0?"M":"L") + x(p[0]).toFixed(1) + " " + y(p[1]).toFixed(1); }).join(" ");
+      parts.push('<path class="actual-line" d="'+aPath+'"/>');
+      pts.slice(1).forEach(function(p){
+        parts.push('<circle class="actual-dot" cx="'+x(p[0]).toFixed(1)+'" cy="'+y(clamp(p[1],minY,maxY)).toFixed(1)+'" r="4"/>');
+      });
+      var last = pts[pts.length-1];
+      parts.push('<text class="end-label" x="'+(x(last[0])+7)+'" y="'+(y(clamp(last[1],minY,maxY))+4)+'">'+fmtClock(last[1])+'</text>');
+    } else {
+      parts.push('<text class="axis-label" x="'+(padL+innerW/2)+'" y="'+(padT+innerH/2)+'" text-anchor="middle">Log your first checkpoint to see progress</text>');
+    }
+
+    // hover layer
+    parts.push('<g id="hoverGroup" style="pointer-events:none">' +
+      '<line class="hover-line" id="hoverLine" x1="0" y1="'+padT+'" x2="0" y2="'+(padT+innerH)+'"/>' +
+      '<rect class="tooltip-bg" id="ttBg" x="0" y="0" width="86" height="34" rx="5" style="opacity:0"/>' +
+      '<text class="tooltip-txt" id="ttWeek" x="0" y="0" style="opacity:0"></text>' +
+      '<text class="tooltip-txt sub" id="ttTime" x="0" y="0" style="opacity:0"></text>' +
+    '</g>');
+    parts.push('<rect class="hitcol" id="hitArea" x="'+padL+'" y="'+padT+'" width="'+innerW+'" height="'+innerH+'"/>');
+
+    svg.innerHTML = parts.join("");
+
+    if(hoverData.length){
+      var hit = document.getElementById("hitArea");
+      hit.style.pointerEvents = "all";
+      hit.addEventListener("mousemove", function(evt){
+        var rect = svg.getBoundingClientRect();
+        var mx = (evt.clientX - rect.left) * (W/rect.width);
+        var week = clamp(Math.round(((mx-padL)/innerW)*52), 0, 52);
+        var nearest = hoverData.reduce(function(best,p){
+          return Math.abs(p[0]-week) < Math.abs(best[0]-week) ? p : best;
+        }, hoverData[0]);
+        var lx = x(nearest[0]), ly = y(clamp(nearest[1],minY,maxY));
+        document.getElementById("hoverLine").setAttribute("x1", lx);
+        document.getElementById("hoverLine").setAttribute("x2", lx);
+        document.getElementById("hoverLine").style.opacity = 1;
+        var boxX = clamp(lx+10, padL, padL+innerW-86);
+        var boxY = clamp(ly-38, padT, padT+innerH-34);
+        var bg = document.getElementById("ttBg");
+        bg.setAttribute("x", boxX); bg.setAttribute("y", boxY); bg.style.opacity = 1;
+        var tw = document.getElementById("ttWeek");
+        tw.setAttribute("x", boxX+10); tw.setAttribute("y", boxY+15); tw.style.opacity = 1;
+        tw.textContent = "Week " + nearest[0];
+        var tt = document.getElementById("ttTime");
+        tt.setAttribute("x", boxX+10); tt.setAttribute("y", boxY+28); tt.style.opacity = 1;
+        tt.textContent = fmtClock(nearest[1]) + " min";
+      });
+      hit.addEventListener("mouseleave", function(){
+        document.getElementById("hoverLine").style.opacity = 0;
+        document.getElementById("ttBg").style.opacity = 0;
+        document.getElementById("ttWeek").style.opacity = 0;
+        document.getElementById("ttTime").style.opacity = 0;
+      });
+    }
+  }
+
+  function renderProgressChart(){
+    var svg = document.getElementById("progressSvg");
+    var W = 860, H = 240, padL = 42, padR = 52, padT = 16, padB = 34;
+    var innerW = W - padL - padR, innerH = H - padT - padB;
+
+    var points = state.runs.filter(function(r){ return r.durationMin>0 && r.distanceKm>0; })
+      .map(function(r){ return {date:r.date, dist:Number(r.distanceKm), dur:Number(r.durationMin), slot:r.slot, hr:r.avgHR||null, checkpoint:!!r.checkpoint}; })
+      .sort(function(a,b){ return a.date.localeCompare(b.date); });
+    points.forEach(function(p){ p.pace = p.dur / p.dist; });
+
+    var hasHR = points.some(function(p){ return p.hr; });
+    document.getElementById("hrLegend").style.display = hasHR ? "flex" : "none";
+    var hrZoneBounds = { tempo: hrFor(HR_PCT.tempo)[0], interval: hrFor(HR_PCT.interval)[0] };
+    function classifyHR(bpm){
+      if(!bpm) return null;
+      if(bpm < hrZoneBounds.tempo) return "easy";
+      if(bpm < hrZoneBounds.interval) return "tempo";
+      return "interval";
+    }
+
+    if(!points.length){
+      svg.innerHTML = '<text class="axis-label" x="'+(W/2)+'" y="'+(H/2)+'" text-anchor="middle">Log a run with both duration and distance to see this chart</text>';
+      return;
+    }
+
+    var maxDist = Math.max.apply(null, points.map(function(p){return p.dist;}));
+    var maxDur = Math.max.apply(null, points.map(function(p){return p.dur;}));
+    function niceStep(rough){
+      var mag = Math.pow(10, Math.floor(Math.log10(rough||1)));
+      var norm = rough/mag;
+      var step = norm<=1 ? 1 : norm<=2 ? 2 : norm<=5 ? 5 : 10;
+      return step*mag;
+    }
+    function niceMax(v, minStep){
+      var step = Math.max(niceStep(v/5), minStep);
+      return Math.ceil((v*1.12)/step)*step;
+    }
+    var xMax = niceMax(maxDist, 1);
+    var yMax = niceMax(maxDur, 5);
+    var xStep = niceStep(xMax/5);
+    var yStep = niceStep(yMax/5);
+
+    function x(d){ return padL + (d/xMax)*innerW; }
+    function y(t){ return padT + (1 - t/yMax)*innerH; }
+
+    var parts = [];
+    for(var vx=0; vx<=xMax+1e-9; vx+=xStep){
+      parts.push('<line class="grid-line" x1="'+x(vx).toFixed(1)+'" y1="'+padT+'" x2="'+x(vx).toFixed(1)+'" y2="'+(padT+innerH)+'"/>');
+      parts.push('<text class="axis-label" x="'+x(vx).toFixed(1)+'" y="'+(H-16)+'" text-anchor="middle">'+(Math.round(vx*10)/10)+'</text>');
+    }
+    for(var vy=0; vy<=yMax+1e-9; vy+=yStep){
+      parts.push('<line class="grid-line" x1="'+padL+'" y1="'+y(vy).toFixed(1)+'" x2="'+(padL+innerW)+'" y2="'+y(vy).toFixed(1)+'"/>');
+      parts.push('<text class="axis-label" x="'+(padL-6)+'" y="'+(y(vy)+3).toFixed(1)+'" text-anchor="end">'+Math.round(vy)+'</text>');
+    }
+    parts.push('<text class="axis-label" x="'+(padL+innerW/2)+'" y="'+(H-2)+'" text-anchor="middle">distance (km)</text>');
+    parts.push('<text class="axis-label" x="4" y="'+(padT-4)+'" text-anchor="start">min</text>');
+
+    [0.2,0.4,0.6,0.8,1.0].forEach(function(f){
+      var pace = Math.round(((yMax*f)/xMax)*4)/4;
+      if(pace<=0) return;
+      var endY = pace*xMax;
+      if(endY > yMax+0.01) return;
+      parts.push('<line class="guide-line" x1="'+x(0).toFixed(1)+'" y1="'+y(0).toFixed(1)+'" x2="'+x(xMax).toFixed(1)+'" y2="'+y(endY).toFixed(1)+'"/>');
+      parts.push('<text class="guide-label" x="'+(x(xMax)-4).toFixed(1)+'" y="'+(y(endY)-4).toFixed(1)+'" text-anchor="end">'+fmtPace(pace)+'/km</text>');
+    });
+
+    var n = points.length;
+    points.forEach(function(p, i){
+      var t = n>1 ? i/(n-1) : 1;
+      var cx = x(p.dist), cy = y(Math.min(p.dur, yMax));
+      var hrClass = p.hr ? " hr-"+classifyHR(p.hr) : "";
+      var cpClass = p.checkpoint ? " cp" : "";
+      parts.push('<circle class="prog-dot'+hrClass+cpClass+'" data-i="'+i+'" cx="'+cx.toFixed(1)+'" cy="'+cy.toFixed(1)+'" r="5" style="--t:'+t.toFixed(3)+'"></circle>');
+    });
+
+    parts.push('<g id="progHoverGroup" style="pointer-events:none">' +
+      '<rect class="tooltip-bg" id="pttBg" x="0" y="0" width="152" height="61" rx="5" style="opacity:0"/>' +
+      '<text class="tooltip-txt" id="pttLine1" x="0" y="0" style="opacity:0"></text>' +
+      '<text class="tooltip-txt sub" id="pttLine2" x="0" y="0" style="opacity:0"></text>' +
+      '<text class="tooltip-txt sub" id="pttLine3" x="0" y="0" style="opacity:0"></text>' +
+      '<text class="tooltip-txt sub" id="pttLine4" x="0" y="0" style="opacity:0"></text>' +
+    '</g>');
+
+    svg.innerHTML = parts.join("");
+
+    svg.querySelectorAll(".prog-dot").forEach(function(el){
+      el.addEventListener("mouseenter", function(){
+        var i = Number(el.dataset.i);
+        var p = points[i];
+        var boxH = p.hr ? 61 : 48;
+        var cx = Number(el.getAttribute("cx"));
+        var cy = Number(el.getAttribute("cy"));
+        var boxX = clamp(cx+10, padL, padL+innerW-152);
+        var boxY = clamp(cy-boxH-4, padT, padT+innerH-boxH);
+        var bg = document.getElementById("pttBg");
+        bg.setAttribute("x", boxX); bg.setAttribute("y", boxY); bg.setAttribute("height", boxH); bg.style.opacity = 1;
+        var l1 = document.getElementById("pttLine1");
+        l1.setAttribute("x", boxX+10); l1.setAttribute("y", boxY+16); l1.style.opacity = 1;
+        l1.textContent = fmtDate(p.date) + " · " + (p.checkpoint ? "Checkpoint" : "Run " + p.slot);
+        var l2 = document.getElementById("pttLine2");
+        l2.setAttribute("x", boxX+10); l2.setAttribute("y", boxY+29); l2.style.opacity = 1;
+        l2.textContent = p.dist.toFixed(2) + " km in " + fmtDuration(p.dur);
+        var l3 = document.getElementById("pttLine3");
+        l3.setAttribute("x", boxX+10); l3.setAttribute("y", boxY+42); l3.style.opacity = 1;
+        l3.textContent = fmtPace(p.pace) + " / km pace";
+        var l4 = document.getElementById("pttLine4");
+        if(p.hr){
+          l4.setAttribute("x", boxX+10); l4.setAttribute("y", boxY+55); l4.style.opacity = 1;
+          l4.textContent = p.hr + " bpm avg (" + classifyHR(p.hr) + ")";
+        } else {
+          l4.style.opacity = 0;
+        }
+      });
+      el.addEventListener("mouseleave", function(){
+        ["pttBg","pttLine1","pttLine2","pttLine3","pttLine4"].forEach(function(id){ document.getElementById(id).style.opacity = 0; });
+      });
+    });
+  }
+
+  // ---------------- statistics ----------------
+  function summarize(runs){
+    var s = {n:runs.length, km:0, min:0, paceMin:0, paceKm:0, hrSum:0, hrN:0};
+    runs.forEach(function(r){
+      if(r.distanceKm>0) s.km += r.distanceKm;
+      if(r.durationMin>0) s.min += r.durationMin;
+      // pace only counts runs that have both a time and a distance
+      if(r.distanceKm>0 && r.durationMin>0){ s.paceMin += r.durationMin; s.paceKm += r.distanceKm; }
+      if(r.avgHR>0){ s.hrSum += r.avgHR; s.hrN++; }
+    });
+    return s;
+  }
+  function fmtHours(totalMin){
+    var m = Math.round(totalMin);
+    return (m>=60 ? Math.floor(m/60) + " h " : "") + (m%60) + " min";
+  }
+  function fmtKm(km){ return km.toFixed(1) + " km"; }
+  function renderStats(){
+    var el = document.getElementById("stats");
+    var runs = state.runs;
+    document.getElementById("statsTag").textContent = runs.length ? "from " + runs.length + " logged runs" : "";
+    if(!runs.length){
+      el.innerHTML = '<div class="empty">Log a run to see statistics.</div>';
+      return;
+    }
+    var cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - 27);
+    cutoff = cutoff.toISOString().slice(0,10);
+    function bySlot(slot){ return runs.filter(function(r){ return !r.checkpoint && r.slot===slot; }); }
+    var groups = [
+      ["All runs", runs, "total"],
+      ["Run A · quality", bySlot("A")],
+      ["Run B · endurance", bySlot("B")],
+      ["Run C · easy", bySlot("C")],
+      ["Checkpoints", runs.filter(function(r){ return r.checkpoint; })],
+      ["Last 28 days", runs.filter(function(r){ return r.date >= cutoff; })]
+    ].filter(function(g){ return g[1].length || g[0]!=="Checkpoints"; });
+    var html = '<div class="tablewrap"><table><thead><tr><th></th><th>Runs</th><th>Distance</th><th>Time</th><th>Avg&nbsp;pace</th><th>Avg&nbsp;HR</th></tr></thead><tbody>' +
+      groups.map(function(g){
+        var s = summarize(g[1]);
+        return '<tr'+(g[2] ? ' class="'+g[2]+'"' : '')+'><td class="statlabel">'+g[0]+'</td>' +
+          '<td class="num">'+s.n+'</td>' +
+          '<td class="num">'+(s.km ? fmtKm(s.km) : "—")+'</td>' +
+          '<td class="num">'+(s.min ? fmtHours(s.min) : "—")+'</td>' +
+          '<td class="num">'+(s.paceKm ? fmtPace(s.paceMin/s.paceKm)+" /km" : "—")+'</td>' +
+          '<td class="num">'+(s.hrN ? Math.round(s.hrSum/s.hrN)+" bpm" : "—")+'</td></tr>';
+      }).join("") + '</tbody></table></div>';
+
+    var firstDate = firstSessionDate();
+    function weekOf(r){ return weekFromSessionDate(r.date, firstDate) || r.week || 1; }
+    var weekKm = {}, lastWeek = currentWeekFromDate();
+    runs.forEach(function(r){
+      var w = weekOf(r);
+      weekKm[w] = (weekKm[w]||0) + (r.distanceKm>0 ? r.distanceKm : 0);
+      if(w>lastWeek) lastWeek = w;
+    });
+    function best(list, value){
+      return list.reduce(function(a,b){ return a && value(a)>=value(b) ? a : b; }, null);
+    }
+    var all = summarize(runs);
+    var longest = best(runs.filter(function(r){ return r.distanceKm>0; }), function(r){ return r.distanceKm; });
+    var longestTime = best(runs.filter(function(r){ return r.durationMin>0; }), function(r){ return r.durationMin; });
+    // short runs are left out so a quick shakeout can't take the pace record
+    var fastest = best(runs.filter(function(r){ return r.distanceKm>=3 && r.durationMin>0; }), function(r){ return r.distanceKm/r.durationMin; });
+    var bestWeek = best(Object.keys(weekKm), function(w){ return weekKm[w]; });
+    var wk = currentWeek();
+    var rows = [];
+    if(longest) rows.push(["Longest run", fmtKm(longest.distanceKm), fmtDate(longest.date)]);
+    if(longestTime) rows.push(["Longest time on feet", fmtHours(longestTime.durationMin), fmtDate(longestTime.date)]);
+    if(fastest) rows.push(["Fastest average pace", fmtPace(fastest.durationMin/fastest.distanceKm)+" /km", fmtDate(fastest.date) + " · " + fmtKm(fastest.distanceKm)]);
+    if(all.km){
+      rows.push(["Average run", fmtKm(all.km/all.n), fmtHours(all.min/all.n)]);
+      rows.push(["Biggest week", fmtKm(weekKm[bestWeek]), "week " + bestWeek]);
+      rows.push(["Weekly average", fmtKm(all.km/lastWeek), (all.n/lastWeek).toFixed(1) + " runs a week over " + lastWeek + " weeks"]);
+    }
+    rows.push(["This week", fmtKm(weekKm[wk]||0), "of ~" + Math.round(WEEK_KM[wk].total) + " km planned"]);
+    html += '<table><tbody>' + rows.map(function(r){
+      return '<tr><td class="statlabel">'+r[0]+'</td><td class="num">'+r[1]+'</td><td class="detail">'+r[2]+'</td></tr>';
+    }).join("") + '</tbody></table>';
+    el.innerHTML = html;
+  }
+
+  // ---------------- gym program ----------------
+  // Two full-body sessions, A and B, done in turn: A, B, A one week and
+  // B, A, B the next with three visits, or A and B with two. Low volume and
+  // heavy: two hard sets per exercise. Compound lifts are done for 6 reps;
+  // small isolation lifts stay at 10–12 because heavy sixes are rough on the
+  // joints there.
+  var GYM_EX = {
+    squat:    {name:"Takakyykky", sets:"2 × 6", rest:"3 min", muscles:"Etureidet, pakarat", note:"Pääliike."},
+    incline:  {name:"Vinopenkkipunnerrus käsipainoilla", sets:"2 × 6", rest:"3 min", muscles:"Rinnan yläosa, etuolkapäät, ojentajat", note:"Pääliike. Penkki noin 30° kulmassa, lapaluut vedettyinä taakse."},
+    deadlift: {name:"Maastaveto", sets:"2 × 6", rest:"3 min", muscles:"Pakarat, takareidet, alaselkä", note:"Pääliike."},
+    ohp:      {name:"Pystypunnerrus", sets:"2 × 6", rest:"3 min", muscles:"Olkapäät, ojentajat", note:"Pääliike. Istuen tai seisten, ilman heilautusta. Istuen selkä tuettuna penkin selkänojaan."},
+    row:      {name:"Kulmasoutu käsipainolla", sets:"2 × 6 / käsi", rest:"2 min", muscles:"Leveät selkälihakset, yläselkä, hauikset", note:"Toinen käsi ja polvi penkillä, vedä käsipaino lonkalle, älä kierrä vartaloa."},
+    pullup:   {name:"Leuanveto myötäotteella", sets:"2 × max", rest:"2 min", muscles:"Leveät selkälihakset, yläselkä, hauikset", note:"Kehonpainolla, jätä yksi puhdas toisto varastoon."},
+    rdl:      {name:"Romanialainen maastaveto", sets:"2 × 6", rest:"2 min", muscles:"Takareidet, pakarat", note:"Laske hitaasti ja anna takareisien venyä.", alt:"legcurl"},
+    legcurl:  {name:"Takareiden koukistus laitteessa", sets:"2 × 10–12", rest:"1 min", muscles:"Takareidet", note:"Laske hitaasti, noin 3 s. Kevyempi alaselälle: valitse tämä, jos teet A:n ja B:n peräkkäisinä päivinä."},
+    split:    {name:"Bulgarialainen askelkyykky", sets:"2 × 6 / jalka", rest:"2 min", muscles:"Etureidet, pakarat", note:"Käsipainoilla. Yhden jalan voima siirtyy juoksuun."},
+    dip:      {name:"Dippi", sets:"2 × max", rest:"2 min", muscles:"Rinta, etuolkapäät, ojentajat", note:"Kehonpainolla, jätä yksi puhdas toisto varastoon. Nojaa hieman eteenpäin ja laskeudu, kunnes olkavarsi on suunnilleen vaakatasossa. Kun 20 toistoa menee, laske 3 s alas ja pysähdy ala-asennossa."},
+    lateral:  {name:"Vipunosto sivulle", sets:"2 × 10–12", rest:"1 min", muscles:"Olkapäiden sivuosat", note:"Puhtaasti; liian painavalla liike muuttuu heilautukseksi."},
+    triceps:  {name:"Ojentajapunnerrus taljassa", sets:"2 × 10–12", rest:"1 min", muscles:"Ojentajat", note:"Tai ojentajapunnerrus taljassa pään yli."},
+    curl:     {name:"Hauiskääntö käsipainoilla", sets:"2 × 10–12", rest:"1 min", muscles:"Hauikset", note:""},
+    calf:     {name:"Pohjenousu seisten", sets:"2 × 10–12", rest:"1 min", muscles:"Pohkeet", note:"Koko liikerata, pysähdys ala-asennossa. Suojaa pohkeita ja akillesjänteitä juoksussa."},
+    legraise: {name:"Jalkojen nosto riipunnassa", sets:"2 × 8–12", rest:"1 min", muscles:"Vatsalihakset, lonkankoukistajat", note:"Suorin jaloin, jos liike pysyy hallittuna."}
+  };
+  var GYM_SESSIONS = [
+    {key:"A", title:"Kyykky · vinopenkki · soutu", ex:["squat","incline","row","rdl","lateral","triceps","calf"]},
+    {key:"B", title:"Maastaveto · pystypunnerrus · leuanveto", ex:["deadlift","ohp","pullup","split","dip","curl","legraise"]}
+  ];
+
+  function gymWeekNote(){
+    var entry = PLAN[currentWeek()];
+    if(entry.recovery) return "Juoksun palautusviikko: kevennä salillakin. Samat liikkeet ja sarjat, noin 85 % tavallisista painoista.";
+    if(entry.race) return "Kisaviikko: enintään yksi kevyt treeni alkuviikosta, eikä jalkatreeniä neljänä viimeisenä päivänä ennen kisaa.";
+    if(entry.checkpoint) return "Testiviikko: tee jalkatreeni alkuviikosta, vähintään 3 päivää ennen testijuoksua, ja pudota kyykky ja maastaveto yhteen sarjaan.";
+    if(entry.taper) return "Kevennysviikko ennen kisaa: pidä painot, mutta tee vain 1 sarja per liike, jotta jalat ovat tuoreet.";
+    return "";
+  }
+
+  function renderGym(){
+    var note = gymWeekNote();
+    document.getElementById("gymWeekNote").innerHTML = note ? '<div class="banner">'+note+'</div>' : '';
+
+    document.getElementById("gymSessions").innerHTML = GYM_SESSIONS.map(function(s){
+      function row(id, i, isAlt){
+        var ex = GYM_EX[id];
+        // the fuller alternative adds a third set to the first four lifts only
+        var alt = i<4 ? '<div class="kmopt">tai '+ex.sets.replace("2 ×", "3 ×")+'</div>' : '';
+        return '<tr data-ex="'+id+'"'+(ex.alt ? ' class="hasalt"' : '')+(isAlt ? ' class="altrow"' : '')+'><td>' +
+          (isAlt ? '<span class="altor">tai</span> ' : '')+'<b>'+ex.name+'</b>'+(ex.note ? '<div class="exnote">'+ex.note+'</div>' : '')+'</td>' +
+          '<td class="exmuscles">'+ex.muscles+'</td>' +
+          '<td class="num">'+ex.sets+alt+'</td>' +
+          '<td class="num">'+ex.rest+'</td></tr>';
+      }
+      var rows = s.ex.map(function(id, i){
+        return row(id, i) + (GYM_EX[id].alt ? row(GYM_EX[id].alt, i, true) : '');
+      }).join("");
+      return '<div class="card"><h2>Treeni '+s.key+' · '+s.title+'</h2>' +
+        '<div class="tablewrap"><table><thead><tr><th>Liike</th><th>Päälihakset</th><th>Sarjat × toistot</th><th>Palautus</th></tr></thead>' +
+        '<tbody>'+rows+'</tbody></table></div></div>';
+    }).join("");
+    renderGymMuscles();
+  }
+
+  // ---------------- muscle figure ----------------
+  // The regions drawn on the figure and the exercises that train each one.
+  var GYM_MUSCLES = [
+    {key:"frontdelt", name:"Etuolkapäät", ex:["incline","ohp","dip"]},
+    {key:"sidedelt",  name:"Olkapäiden sivuosat", ex:["ohp","lateral"]},
+    {key:"chest",     name:"Rinta", ex:["incline","dip"]},
+    {key:"biceps",    name:"Hauikset", ex:["row","pullup","curl"]},
+    {key:"abs",       name:"Vatsalihakset", ex:["legraise"]},
+    {key:"hipflex",   name:"Lonkankoukistajat", ex:["legraise"]},
+    {key:"quads",     name:"Etureidet", ex:["squat","split"]},
+    {key:"upperback", name:"Yläselkä", ex:["row","pullup"]},
+    {key:"lats",      name:"Leveät selkälihakset", ex:["row","pullup"]},
+    {key:"triceps",   name:"Ojentajat", ex:["incline","ohp","dip","triceps"]},
+    {key:"lowerback", name:"Alaselkä", ex:["deadlift"]},
+    {key:"glutes",    name:"Pakarat", ex:["squat","deadlift","rdl","split"]},
+    {key:"hams",      name:"Takareidet", ex:["deadlift","rdl","legcurl"]},
+    {key:"calves",    name:"Pohkeet", ex:["calf"]}
+  ];
+  // Muscle shapes for a figure 200 wide, centred on x=100, seen from each side.
+  var GYM_FIGURE = {
+    front: {
+      sidedelt:  '<ellipse cx="50" cy="85" rx="7" ry="11"/><ellipse cx="150" cy="85" rx="7" ry="11"/>',
+      frontdelt: '<ellipse cx="65" cy="79" rx="7" ry="9"/><ellipse cx="135" cy="79" rx="7" ry="9"/>',
+      chest:     '<path d="M73,83 Q86,77 98,83 L98,104 Q84,114 73,102 Z"/><path d="M127,83 Q114,77 102,83 L102,104 Q116,114 127,102 Z"/>',
+      biceps:    '<ellipse cx="49" cy="116" rx="6" ry="16" transform="rotate(6 49 116)"/><ellipse cx="151" cy="116" rx="6" ry="16" transform="rotate(-6 151 116)"/>',
+      abs:       '<rect x="87" y="112" width="26" height="62" rx="9"/>',
+      hipflex:   '<ellipse cx="77" cy="203" rx="9" ry="5" transform="rotate(35 77 203)"/><ellipse cx="123" cy="203" rx="9" ry="5" transform="rotate(-35 123 203)"/>',
+      quads:     '<ellipse cx="82" cy="258" rx="12" ry="34"/><ellipse cx="118" cy="258" rx="12" ry="34"/>'
+    },
+    back: {
+      sidedelt:  '<ellipse cx="50" cy="85" rx="7" ry="11"/><ellipse cx="150" cy="85" rx="7" ry="11"/>',
+      upperback: '<path d="M100,64 L126,75 L114,104 L100,114 L86,104 L74,75 Z"/>',
+      lats:      '<path d="M68,100 L88,110 L96,150 L74,148 Q66,124 68,100 Z"/><path d="M132,100 L112,110 L104,150 L126,148 Q134,124 132,100 Z"/>',
+      triceps:   '<ellipse cx="49" cy="114" rx="6" ry="17" transform="rotate(6 49 114)"/><ellipse cx="151" cy="114" rx="6" ry="17" transform="rotate(-6 151 114)"/>',
+      lowerback: '<rect x="89" y="154" width="22" height="34" rx="7"/>',
+      glutes:    '<ellipse cx="83" cy="208" rx="15" ry="13"/><ellipse cx="117" cy="208" rx="15" ry="13"/>',
+      hams:      '<ellipse cx="82" cy="264" rx="12" ry="32"/><ellipse cx="118" cy="264" rx="12" ry="32"/>',
+      calves:    '<ellipse cx="81" cy="338" rx="8.5" ry="26"/><ellipse cx="119" cy="338" rx="8.5" ry="26"/>'
+    }
+  };
+  var GYM_BODY =
+    '<g class="body">' +
+      '<circle cx="100" cy="30" r="18"/><rect x="92" y="44" width="16" height="22"/>' +
+      '<path d="M70,64 L130,64 Q150,66 152,84 L140,100 L136,150 Q134,172 138,196 L134,216 L66,216 L62,196 Q66,172 64,150 L60,100 L48,84 Q50,66 70,64 Z"/>' +
+      '<path class="limb" stroke-width="18" d="M52,86 L46,140 M148,86 L154,140"/>' +
+      '<path class="limb" stroke-width="14" d="M46,140 L38,194 M154,140 L162,194"/>' +
+      '<circle cx="36" cy="208" r="8"/><circle cx="164" cy="208" r="8"/>' +
+      '<path class="limb" stroke-width="32" d="M82,216 L82,298 M118,216 L118,298"/>' +
+      '<path class="limb" stroke-width="21" d="M82,298 L80,390 M118,298 L120,390"/>' +
+      '<ellipse cx="78" cy="406" rx="12" ry="7"/><ellipse cx="122" cy="406" rx="12" ry="7"/>' +
+    '</g>';
+
+  function gymExerciseMuscles(id){
+    return GYM_MUSCLES.filter(function(m){ return m.ex.indexOf(id)!==-1; }).map(function(m){ return m.key; });
+  }
+  function gymSessionOf(id){
+    return GYM_SESSIONS.filter(function(s){
+      return s.ex.some(function(e){ return e===id || GYM_EX[e].alt===id; });
+    })[0].key;
+  }
+
+  var gymPinned = []; // muscle keys kept highlighted after a click or tap
+  function gymHighlight(keys){
+    var box = document.getElementById("gymMuscles");
+    box.classList.toggle("picking", keys.length>0);
+    Array.prototype.forEach.call(box.querySelectorAll("[data-mus]"), function(el){
+      el.classList.toggle("on", keys.indexOf(el.getAttribute("data-mus"))!==-1);
+    });
+  }
+
+  function renderGymMuscles(){
+    function side(which, label, dx){
+      var shapes = GYM_MUSCLES.map(function(m){
+        if(!GYM_FIGURE[which][m.key]) return "";
+        // the more exercises train a muscle, the stronger its tint
+        return '<g class="mus" data-mus="'+m.key+'" style="--lvl:'+(0.25+0.15*m.ex.length)+'">' +
+          '<title>'+m.name+'</title>'+GYM_FIGURE[which][m.key]+'</g>';
+      }).join("");
+      return '<g transform="translate('+dx+' 0)">'+GYM_BODY+shapes +
+        '<text class="figcap" x="100" y="434" text-anchor="middle">'+label+'</text></g>';
+    }
+    var list = GYM_MUSCLES.map(function(m){
+      var names = m.ex.map(function(id){ return GYM_EX[id].name+" ("+gymSessionOf(id)+")"; }).join(" · ");
+      return '<li class="musrow" data-mus="'+m.key+'"><b>'+m.name+'</b><span>'+names+'</span></li>';
+    }).join("");
+    document.getElementById("gymMuscles").innerHTML =
+      '<svg viewBox="0 0 400 440" role="img" aria-label="Ohjelman treenaamat lihakset edestä ja takaa">' +
+        side("front", "Edestä", 0) + side("back", "Takaa", 200) + '</svg>' +
+      '<div class="muslist"><p>Vahvempi väri tarkoittaa, että useampi liike treenaa lihasta. Osoita tai napauta lihasta, alla olevaa riviä tai liikettä yllä olevissa taulukoissa, niin se korostuu.</p>' +
+      '<ul>'+list+'</ul></div>';
+    gymHighlight(gymPinned);
+  }
+
+  function gymKeysAt(target){
+    var el = target.closest("[data-mus],[data-ex]");
+    if(!el) return null;
+    return el.hasAttribute("data-mus") ? [el.getAttribute("data-mus")] : gymExerciseMuscles(el.getAttribute("data-ex"));
+  }
+  ["gymMuscles","gymSessions"].forEach(function(id){
+    var box = document.getElementById(id);
+    box.addEventListener("mouseover", function(e){
+      var keys = gymKeysAt(e.target);
+      if(keys) gymHighlight(keys);
+    });
+    box.addEventListener("mouseout", function(){ gymHighlight(gymPinned); });
+    box.addEventListener("click", function(e){
+      var keys = gymKeysAt(e.target);
+      if(!keys) return;
+      gymPinned = keys.join()===gymPinned.join() ? [] : keys;
+      gymHighlight(gymPinned);
+    });
+  });
+
+  function showView(){
+    var views = { run:"viewRun", stats:"viewStats", gym:"viewGym", backlog:"viewBacklog" };
+    var view = location.hash.slice(1);
+    if(!views[view]) view = "run";
+    Object.keys(views).forEach(function(v){ document.getElementById(views[v]).hidden = v!==view; });
+    document.querySelectorAll(".viewnav .chip").forEach(function(a){
+      a.classList.toggle("active", a.dataset.view===view);
+    });
+  }
+
+  // ---------------- development backlog ----------------
+  var editingIdeaId = null;
+  var ideaFilter = "all"; // "all" or an app name
+  var DEFAULT_APP = "Juoksu"; // ideas from before the app field existed
+
+  function ideaApp(i){ return i.app || DEFAULT_APP; }
+  function ideaApps(){
+    var apps = [];
+    state.backlog.forEach(function(i){ if(apps.indexOf(ideaApp(i)) === -1) apps.push(ideaApp(i)); });
+    return apps.sort(function(a,b){ return a.localeCompare(b); });
+  }
+  function filteredIdeas(){
+    return state.backlog.filter(function(i){ return ideaFilter==="all" || ideaApp(i)===ideaFilter; });
+  }
+  function openIdeas(){ return filteredIdeas().filter(function(i){ return !i.built; }); }
+  function cancelIdeaEdit(){
+    editingIdeaId = null;
+    document.getElementById("ideaApp").value = ideaFilter!=="all" ? ideaFilter : "";
+    document.getElementById("ideaText").value = "";
+    document.getElementById("ideaSubmit").textContent = "Add idea";
+    document.getElementById("ideaCancel").style.display = "none";
+  }
+  function renderBacklogSync(){
+    var el = document.getElementById("backlogSync");
+    if(!el) return;
+    el.textContent = fileSyncState==="connected"
+      ? "✓ Saved to " + (fileHandle ? fileHandle.name : "the backup file") + ", where Claude can read it. When the list is long enough, tell Claude to build the backlog."
+      : "The backup file isn't connected, so Claude can't see this list. Connect it under Settings on the Running page, or use Copy for Claude and paste the list into the chat.";
+  }
+  function renderBacklog(){
+    var apps = ideaApps();
+    if(ideaFilter!=="all" && apps.indexOf(ideaFilter)===-1) ideaFilter = "all";
+    document.getElementById("ideaApps").innerHTML = apps.map(function(a){
+      return '<option value="'+escapeHtml(a)+'">';
+    }).join("");
+    var filters = document.getElementById("ideaFilters");
+    filters.innerHTML = apps.length > 1 ? ["all"].concat(apps).map(function(a){
+      return '<button type="button" class="chip'+(ideaFilter===a?' active':'')+'" data-f="'+escapeHtml(a)+'">'+
+        (a==="all" ? "All apps" : escapeHtml(a))+'</button>';
+    }).join("") : "";
+    filters.querySelectorAll(".chip").forEach(function(c){
+      c.addEventListener("click", function(){
+        ideaFilter = c.dataset.f;
+        if(!editingIdeaId) document.getElementById("ideaApp").value = ideaFilter!=="all" ? ideaFilter : "";
+        renderBacklog();
+      });
+    });
+
+    var open = openIdeas();
+    var built = filteredIdeas().filter(function(i){ return i.built; });
+    document.getElementById("backlogCount").textContent =
+      state.backlog.length ? open.length + " open" + (built.length ? " · " + built.length + " built" : "") : "";
+    var list = document.getElementById("ideaList");
+    list.innerHTML = open.concat(built).map(function(i){
+      return '<div class="idea'+(i.built?' built':'')+'"><div>' +
+        '<div class="text">'+escapeHtml(i.text)+'</div>' +
+        '<div class="meta"><span class="app">'+escapeHtml(ideaApp(i))+'</span> · '+(i.built ? "✓ Built" : fmtDate(i.created))+'</div></div>' +
+        '<div class="rowactions">' +
+        (i.built ? '' : '<button class="edit" data-id="'+i.id+'" title="Edit">&#9998;</button>') +
+        '<button class="del" data-id="'+i.id+'" title="Delete">&times;</button>' +
+        '</div></div>';
+    }).join("");
+    list.querySelectorAll(".edit").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var idea = state.backlog.find(function(x){ return x.id===btn.dataset.id; });
+        if(!idea) return;
+        editingIdeaId = idea.id;
+        var ta = document.getElementById("ideaText");
+        document.getElementById("ideaApp").value = ideaApp(idea);
+        ta.value = idea.text;
+        document.getElementById("ideaSubmit").textContent = "Save changes";
+        document.getElementById("ideaCancel").style.display = "inline-block";
+        ta.focus();
+      });
+    });
+    list.querySelectorAll(".del").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var idea = state.backlog.find(function(x){ return x.id===btn.dataset.id; });
+        if(idea && !idea.built && !confirm("Delete this idea?")) return;
+        state.backlog = state.backlog.filter(function(x){ return x.id!==btn.dataset.id; });
+        if(editingIdeaId===btn.dataset.id) cancelIdeaEdit();
+        save();
+      });
+    });
+    document.getElementById("ideaCopy").disabled = !open.length;
+    renderBacklogSync();
+  }
+
+  function render(){
+    renderTop();
+    renderBacklog();
+    renderStats();
+    renderGym();
+    renderFullProgram();
+    renderZones();
+    renderHistory();
+    renderChart();
+    renderProgressChart();
+    renderDayWarning();
+    document.getElementById("startDate").value = state.startDate;
+    document.getElementById("weekOverride").value = state.weekOverride || "";
+    document.getElementById("dayA").value = state.preferredDays.A;
+    document.getElementById("dayB").value = state.preferredDays.B;
+    document.getElementById("dayC").value = state.preferredDays.C;
+  }
+
+  // ---------------- events ----------------
+  document.getElementById("runForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var date = document.getElementById("rDate").value || new Date().toISOString().slice(0,10);
+    var slotVal = document.getElementById("rSlot").value;
+    var isCp = slotVal === "CP";
+    var payload = {
+      date: date,
+      slot: isCp ? "B" : slotVal,
+      durationMin: readDuration(),
+      distanceKm: readDecimal("rDist"),
+      avgHR: readHR(),
+      notes: document.getElementById("rNotes").value.trim(),
+      checkpoint: isCp
+    };
+    if(editingRunId){
+      var run = state.runs.find(function(x){ return x.id===editingRunId; });
+      if(run){ Object.assign(run, payload); syncCheckpointForRun(run); }
+      cancelRunEdit();
+    } else {
+      if(editingOrphanCpId){
+        state.checkpoints = state.checkpoints.filter(function(c){ return c.id!==editingOrphanCpId; });
+      }
+      payload.id = uid();
+      payload.week = currentWeek();
+      state.runs.push(payload);
+      syncCheckpointForRun(payload);
+      document.getElementById("rDurH").value = "";
+      document.getElementById("rDurM").value = "";
+      document.getElementById("rDurS").value = "";
+      document.getElementById("rDist").value = "";
+      document.getElementById("rHR").value = "";
+      document.getElementById("rNotes").value = "";
+      document.getElementById("rNotes").placeholder = "How did it feel? Weather, terrain, RPE…";
+      if(isCp) document.getElementById("rSlot").value = "B";
+      editingOrphanCpId = null;
+    }
+    save();
+  });
+  document.getElementById("runFormCancel").addEventListener("click", cancelRunEdit);
+
+  document.getElementById("rSlot").addEventListener("change", function(){
+    if(this.value === "CP" && !document.getElementById("rDist").value){
+      document.getElementById("rDist").value = "10";
+    }
+  });
+
+  document.getElementById("startDate").addEventListener("change", function(){
+    state.startDate = this.value;
+    save();
+  });
+  document.getElementById("weekOverride").addEventListener("change", function(){
+    var v = Number(this.value);
+    state.weekOverride = (v>=1 && v<=52) ? v : null;
+    save();
+  });
+  document.getElementById("maxHR").addEventListener("change", function(){
+    var v = Number(this.value);
+    state.maxHR = (v>0) ? v : 190;
+    save();
+  });
+  document.getElementById("restHR").addEventListener("change", function(){
+    var v = Number(this.value);
+    state.restingHR = (v>0) ? v : 60;
+    save();
+  });
+
+  ["dayA","dayB","dayC"].forEach(function(id){
+    var sel = document.getElementById(id);
+    DAY_NAMES.forEach(function(name, i){
+      var opt = document.createElement("option");
+      opt.value = i; opt.textContent = name;
+      sel.appendChild(opt);
+    });
+    sel.addEventListener("change", function(){
+      state.preferredDays[id.slice(3)] = Number(this.value);
+      save();
+    });
+  });
+
+  document.getElementById("ideaForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var text = document.getElementById("ideaText").value.trim();
+    if(!text) return;
+    var appEl = document.getElementById("ideaApp");
+    var app = appEl.value.trim();
+    if(!app){ appEl.focus(); return; }
+    // reuse the existing spelling so "juoksu" and "Juoksu" stay one app
+    app = ideaApps().find(function(a){ return a.toLowerCase()===app.toLowerCase(); }) || app;
+    var idea = editingIdeaId && state.backlog.find(function(x){ return x.id===editingIdeaId; });
+    if(idea){ idea.text = text; idea.app = app; }
+    else state.backlog.push({ id: uid(), app: app, text: text, created: new Date().toISOString().slice(0,10) });
+    cancelIdeaEdit();
+    save();
+  });
+  document.getElementById("ideaText").addEventListener("keydown", function(e){
+    if(e.key === "Enter" && !e.shiftKey && !e.isComposing){
+      e.preventDefault();
+      document.getElementById("ideaSubmit").click();
+    }
+  });
+  document.getElementById("ideaCancel").addEventListener("click", cancelIdeaEdit);
+  document.getElementById("ideaCopy").addEventListener("click", function(){
+    var btn = this;
+    var text = "Build these backlog ideas:\n" + openIdeas().map(function(i){
+      return "- [" + i.id + "] (" + ideaApp(i) + ") " + i.text.replace(/\n/g, "\n  ");
+    }).join("\n");
+    function done(){
+      btn.textContent = "Copied";
+      setTimeout(function(){ btn.textContent = "Copy for Claude"; }, 1500);
+    }
+    function fallback(){
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta); ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      done();
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  });
+
+  document.getElementById("fileSyncBtn").addEventListener("click", function(){
+    if(fileSyncState==="disconnected") connectBackupFile();
+    else if(fileSyncState==="reconnect" || fileSyncState==="error") reconnectBackupFile();
+    else if(fileSyncState==="connected") disconnectBackupFile();
+  });
+
+  document.getElementById("exportBtn").addEventListener("click", function(){
+    var data = JSON.stringify(state, null, 2);
+    var filename = "10k-logbook-backup-" + new Date().toISOString().slice(0,10) + ".json";
+    if(window.claude && window.claude.downloads){
+      window.claude.downloads.save({filename: filename, data: data}).catch(function(){});
+    } else {
+      var blob = new Blob([data], {type:"application/json"});
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    }
+  });
+  document.getElementById("importBtn").addEventListener("click", function(){
+    document.getElementById("importFile").click();
+  });
+  document.getElementById("importFile").addEventListener("change", function(e){
+    var file = e.target.files[0];
+    if(!file) return;
+    var reader = new FileReader();
+    reader.onload = function(){
+      try{
+        var parsed = JSON.parse(reader.result);
+        // backups from before the backlog existed shouldn't wipe it
+        if(!Array.isArray(parsed.backlog)) parsed.backlog = state.backlog;
+        state = Object.assign(defaultState(), parsed);
+        markBuiltIdeas();
+        save();
+      }catch(err){ alert("Couldn't read that backup file."); }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  });
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    if(confirm("Reset all logbook data? This can't be undone unless you exported a backup.")){
+      var backlog = state.backlog; // development ideas aren't logbook data
+      state = defaultState();
+      state.backlog = backlog;
+      save();
+    }
+  });
+
+  load();
+  document.getElementById("rDate").value = new Date().toISOString().slice(0,10);
+  render();
+  showView();
+  window.addEventListener("hashchange", function(){ showView(); window.scrollTo(0,0); });
+  restoreBackupFileHandle();
+})();
+</script>
